@@ -18,14 +18,14 @@ export default function About({ internshipRef }: AboutProps) {
   };
 
   return (
-    <div className="border border-amber-400 z-0 text-zinc-200 mb-40 mt-32 lg:mt-80 m-4 ">
       <Vortex     
         backgroundColor=''
         rangeY={800}
         particleCount={500}
         baseHue={120}
-        className=" py-6"
+        className=" py-12"
       >
+    <div className="border border-amber-400/10 z-0 text-zinc-200 mb-40 mt-32 lg:mt-80 m-4 ">
       <p className="anim corsor-default text-center font-serif py-5  text-2xl">
        <Link href="" className='anim'> About Me</Link>
       </p>
@@ -119,7 +119,7 @@ export default function About({ internshipRef }: AboutProps) {
 
         <p>Let&apos;s connect and explore how we can work together to create impactful digital solutions!</p>
       </div>
-      </Vortex>
     </div>
+      </Vortex>
   );
 }
