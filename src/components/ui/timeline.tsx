@@ -37,8 +37,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="bg-gradient-to-br overflow-y-hidden max-w-full text-white w-screen from-stone-950 to-stone-900 no-scrollbar overflow-x-hidden"
       ref={containerRef}
     >
-      <div className="flex flex-row pt-10 px-8">
-          <h2 className="text-7xl font-semibold text-center text-amber-400 mb-12 mt-5 ">
+    <div className="flex flex-row pt-10 px-8">
+          <h2 className="sm:text-7xl text-4xl font-semibold text-center text-amber-400 mb-12 mt-5 ">
             Study Series
           </h2>
           <Image
@@ -46,11 +46,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             width={200}
             height={400}
             alt="Think Deeper!!"
-            className="text-amber-400 lg:fixed lg:right-0 lg:top-52 lg:w-1/3 mx-auto "
+            className="text-amber-400 lg:fixed lg:right-0 lg:top-52 w-1/3 mx-auto "
           />
         </div>
 
-      <div ref={ref} className="relative pb-20">
+      <div ref={ref} className="relative pb-20 ">
         {data.map((item, index) => (
           <div
             key={index}
