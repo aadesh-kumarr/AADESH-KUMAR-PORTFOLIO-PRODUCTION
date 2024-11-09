@@ -8,10 +8,9 @@ export default function Footer() {
 
 
 
-        <div className=" w-1/2 text-center mx-auto">
         <div className=" text-center flex flex-col mx-auto">
         site-map</div>
-        <div className="flex justify-evenly mx-auto mt-10 gap-2 ">
+        <div className="flex text-center justify-evenly mx-10  flex-row  mt-10 gap-2">
             <Link href="/home" className="anim">
             Home
             </Link>
@@ -25,7 +24,6 @@ export default function Footer() {
             Education
             </Link>
             </div>
-        </div>
     </footer>
   );
 }

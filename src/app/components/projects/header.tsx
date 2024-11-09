@@ -5,7 +5,8 @@ export default function Header() {
         <div className="flex sm:flex-col sm:w-1/2">
       <p
         className="
-        text-5xl
+        text-3xl
+        sm:text-5xl
       py-4
       font-mono
       flex mx-auto space-x-5 "
