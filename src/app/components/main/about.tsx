@@ -23,14 +23,14 @@ export default function About({ internshipRef }: AboutProps) {
         rangeY={800}
         particleCount={500}
         baseHue={120}
-        className=" py-12"
+        className=" "
       >
-    <div className="border border-amber-400/10 z-0 text-zinc-200 mb-40 mt-32 lg:mt-80 m-4 ">
+    <div className="border  border-amber-400/10 text-zinc-200 sm:mb-80 mb-60  mt-32 lg:mt-80  ">
       <p className="anim corsor-default text-center font-serif py-5  text-2xl">
        <Link href="" className='anim'> About Me</Link>
       </p>
 
-      <div className="flex flex-row justify-evenly px-1 overflow-hidden gap-2">
+      <div className="flex flex-row justify-between overflow-hidden">
         {/* First Block */}
         <Link href={'/education'} className="svgs">
           <Image
@@ -85,40 +85,32 @@ export default function About({ internshipRef }: AboutProps) {
 
       {/* About Me Text */}
       <div className="px-4 text-sm pt-5 text-justify space-y-4">
-        <p>
-          Hello! I&apos;m <span className="font-serif text-xl">Aadesh Kumar</span>, a{' '}
-          <span className="font-medium text-amber-400">Final Year B.Tech CSE Student</span> with a strong foundation in{' '}
-          <span className="font-medium text-amber-400">Python</span> and{' '}
-          <span className="font-medium text-amber-400">Django</span>. While my primary focus lies in backend
-          development, I&apos;ve also honed my skills in web development using{' '}
-          <span className="font-medium text-amber-400">Next.js</span>, giving me a versatile edge when building
-          dynamic and responsive applications.
-        </p>
+  <p>
+    Hello! I&apos;m <span className="font-serif text-xl">Aadesh Kumar</span>, a{' '}
+    <span className="font-medium text-amber-400">Final Year B.Tech CSE Student</span> with expertise in{' '}
+    <span className="font-medium text-amber-400">Python</span> and{' '}
+    <span className="font-medium text-amber-400">Django</span>. My focus is backend development, complemented by
+    experience with <span className="font-medium text-amber-400">Next.js</span> for building dynamic, responsive apps.
+  </p>
 
-        <p>
-          Beyond coding, I&apos;ve taken on leadership roles in organizing{' '}
-          <span className="font-medium text-amber-400">college fests and events</span>, including{' '}
-          <span className="font-medium text-amber-400">debates</span>,{' '}
-          <span className="font-medium text-amber-400">coding quests</span>, and various other activities. These
-          experiences have helped me develop not only my technical skills but also my organizational and teamwork
-          abilities.
-        </p>
+  <p>
+    Outside of coding, I&apos;ve organized <span className="font-medium text-amber-400">college events</span> like{' '}
+    <span className="font-medium text-amber-400">debates</span> and <span className="font-medium text-amber-400">coding quests</span>, which enhanced my teamwork and leadership skills.
+  </p>
 
-        <p>
-          I&apos;m also passionate about sharing knowledge and engaging with the tech community. I run a{' '}
-          <span className="font-medium text-amber-400">YouTube channel</span> dedicated to{' '}
-          <span className="font-medium text-amber-400">programming</span>, where I create content to help others learn
-          and grow in the field.
-        </p>
+  <p>
+    I&apos;m also passionate about tech education and run a <span className="font-medium text-amber-400">YouTube channel</span> on programming, where I share knowledge and engage with the tech community.
+  </p>
 
-        <p>
-          Additionally, I&apos;ve gained valuable professional experience during my internship with{' '}
-          <span className="font-medium text-amber-400">Edureka</span>, where I further sharpened my skills and
-          industry knowledge.
-        </p>
+  <p>
+    My internship at <span className="font-medium text-amber-400">Edureka</span> provided valuable professional experience, helping me further develop my technical skills and industry insights.
+  </p>
 
-        <p>Let&apos;s connect and explore how we can work together to create impactful digital solutions!</p>
-      </div>
+  <p>Let&apos;s connect and explore how we can create impactful digital solutions together!</p>
+</div>
+
+
+
     </div>
       </Vortex>
   );
