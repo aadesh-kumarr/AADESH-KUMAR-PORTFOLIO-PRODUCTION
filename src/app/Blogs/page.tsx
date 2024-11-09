@@ -41,7 +41,7 @@ export default function Blog() {
       <div className="fixed top-0 left-0 px-2 right-0 ">
         <Navbar />
       </div>
-      <hr className="mt-20 mb-5" style={{ borderColor: "rgba(255, 215, 0, 0.5)" }} />
+      <hr className="mt-20 mb-5 custom-hr" />
 
       {/* Pass setBlog function to the child to control the state */}
       <Switch blog={category} setBlog={setBlogcategory} />
