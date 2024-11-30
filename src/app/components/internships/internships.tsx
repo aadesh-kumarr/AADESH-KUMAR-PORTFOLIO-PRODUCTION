@@ -205,8 +205,8 @@ const cards = [
     {
       description: "Machine Learning and Data Science",
       title: "Edureka!",
-      src: "/online_certificates/edureka_data_science_internship.png",
-      link: "/online_certificates/edureka_data_science_internship.png",
+      src: "/online_certificates/edureka_data_science_internship.webp",
+      link: "/online_certificates/edureka_data_science_internship.webp",
       content: () => {
         return (
           <div className="flex flex-col md:flex-row gap-4 w-full ">
@@ -243,8 +243,8 @@ const cards = [
     {
       description: "Market Analysis and Web Development",
       title: "Lostronaunt",
-      src: "/online_certificates/lostronaunt.png",
-      link: "/online_certificates/lostronaunt.png",
+      src: "/online_certificates/lostronaunt.webp",
+      link: "/online_certificates/lostronaunt.webp",
       content: () => {
         return (
           <div className="flex flex-col  gap-4 w-full mt-5">

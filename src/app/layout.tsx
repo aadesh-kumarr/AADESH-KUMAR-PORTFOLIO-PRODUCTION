@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   authors: [
     { name: "Aadesh Kumar", url: "https://aadeshkumar-portfolio.vercel.app/" },
   ],
+
+  
   openGraph: {
     title: "Aadesh Kumar - Web Developer & Programmer",
     description:
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/portrait.png", 
+        url: "/portrait.webp", 
         width: 1200,
         height: 630,
         alt: "Aadesh Kumar Portfolio Banner",
@@ -35,11 +37,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@aadeshkumar",
     title: "Aadesh Kumar - Web Developer & Programmer",
     description:
       "Portfolio showcasing projects, skills, and expertise in web development.",
-    images: "/portrait.png", 
+    images: "/portrait.webp", 
   },
 };
 
@@ -64,6 +65,7 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
       </head>
 
       <body className="antialiased no-scrollbar">

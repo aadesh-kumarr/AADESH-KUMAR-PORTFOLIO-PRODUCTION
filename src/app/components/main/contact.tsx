@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaGithub,FaEnvelope } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -29,6 +29,9 @@ WALKING TOWARDS BRILLIANCE
   <a href="https://www.linkedin.com/in/aadesh-kumar/">
     <FaLinkedin className="contact-btns" />
   </a>
+  <a href="mailto:aadeshk306@gmail.com">
+            <FaEnvelope className="contact-btns" />
+          </a>
 
 </div>
 </div>
