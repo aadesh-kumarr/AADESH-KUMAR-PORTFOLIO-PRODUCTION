@@ -11,6 +11,7 @@ import {
 
 export function Certificates() {
   const certificates = [
+    { certificate: "/online_certificates/webdevworkshop.jpg", name: "Web development Workshop" },
     { certificate: "/online_certificates/collegetocorporaee.png", name: "Collegue to Corporatee by DR SUMIT GUPTA UPES" },
     { certificate: "/online_certificates/KAGGLE.png", name: "python by Kaggle GOOGLE CERTIFIED" },
     { certificate: "/online_certificates/kimo_introduction.png", name: "Introduction to AI/ML by Kimo" },
