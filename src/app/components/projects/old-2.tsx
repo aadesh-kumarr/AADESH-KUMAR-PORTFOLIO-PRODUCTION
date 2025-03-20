@@ -140,54 +140,43 @@ export function Lostronaunt() {
   );
 }
 
-export function Django() {
-  // State to control visibility of vardiv
-  const [isVisible, setIsVisible] = useState(false);
 
-  // Reference for the vardiv to auto-scroll
+export function SocialMedia() {
+  const [isVisible, setIsVisible] = useState(false);
   const vardivRef = useRef<HTMLDivElement | null>(null);
 
-  // Scroll into view when isVisible is true
   useEffect(() => {
     if (isVisible && vardivRef.current) {
       vardivRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [isVisible]);
 
-  // Toggle visibility when the button is clicked
   const handleToggle = () => {
     setIsVisible(!isVisible);
   };
 
   return (
     <div className="mx-auto rounded-lg border border-gray-700 shadow-xl flex flex-col justify-center items-center bg-neutral-900/20">
+      <p className="bg-red-600 w-full text-center">under development</p>
       <p className="text-xl text-center mt-5 text-blue-400 font-semibold bg-white bg-opacity-10 w-fit p-4 mx-auto rounded-2xl shadow-md">
-        Django Project Overview
+        Social Media App Overview
       </p>
-      <p className="mt-2 text-gray-300 italic">
-        Solo project on Django framework.
-      </p>
+      <p className="mt-2 text-gray-300 italic">Solo project built using Next.js and MongoDB Atlas.</p>
 
       <div className="text-sm bg-neutral-800 bg-opacity-50 p-4 rounded-lg mt-4 w-full">
-        <p className="text-left text-2xl text-blue-400 my-3">
-          What was the Problem Statement?
-        </p>
-        <p className="text-gray-200">
-          A project built using Django aimed at simplifying user authentication
-          and handling database operations. The core features include:
-        </p>
+        <p className="text-left text-2xl text-blue-400 my-3">Key Features</p>
         <ul className="list-disc list-inside text-left text-gray-300 mt-2">
-          <li>
-            To create a website to be integrated with the whatsp broadcast
-            software.
-          </li>
-          <li>CRUD operations using Django models.</li>
-          <li>Basic user profile management and session handling.</li>
+          <li>Real-time chat functionality with WebSocket integration.</li>
+          <li>User authentication with auth js and known providers .</li>
+          <li>Media uploads using UploadThing with cloud storage support.</li>
+          <li>Follow, like, and comment features for enhanced engagement.</li>
+          <li>Profile customization with bio, profile picture, and cover image support.</li>
         </ul>
-        <Link href={"https://whatbroadcast.onrender.com/"}>
+
+        <Link href={"https://time-bomb-ruddy.vercel.app/"}>
           <Image
-            src="/Djangodemo.png"
-            alt="Django Project Screenshot"
+            src="/Time-Bomb_demo.png"
+            alt="Social Media App Screenshot"
             width={300}
             height={200}
             className="mx-auto mt-5 border border-blue-400 rounded-lg underline-offset-8"
@@ -196,13 +185,12 @@ export function Django() {
 
         <p
           className="mx-auto text-center mt-5 cursor-pointer bg-black w-fit p-2 px-4 rounded-full bg-opacity-30"
-          onClick={handleToggle} // Toggle the div when clicked
+          onClick={handleToggle}
         >
           Tap for More
           <IoIosArrowDropdownCircle className="mx-auto" />
         </p>
 
-        {/* Conditionally render vardiv with smooth transition */}
         <div
           ref={vardivRef}
           className={`overflow-hidden transition-max-height duration-700 ease-in-out ${
@@ -213,36 +201,24 @@ export function Django() {
             className="p-6 border border-gray-700 shadow-lg rounded-lg bg-neutral-900 text-gray-300 mt-4"
             id="vardiv"
           >
-            <h2 className="text-2xl text-blue-400 font-bold mb-4">
-              Key Learnings from the Django Project
-            </h2>
+            <h2 className="text-2xl text-blue-400 font-bold mb-4">Key Learnings from the Project</h2>
             <ul className="list-disc list-inside mb-4 space-y-2 text-justify">
               <li>
-                <strong className="text-blue-400">Authentication:</strong>{" "}
-                Implemented secure login, signup, and password reset
-                functionality using Django&apos;s authentication system.
+                <strong className="text-blue-400">Real-Time Communication:</strong> Implemented live chat using WebSocket for instant user interaction.
               </li>
               <li>
-                <strong className="text-blue-400">Database Handling:</strong>{" "}
-                Worked with Django&apos;s ORM to manage user data and session
-                storage efficiently.
+                <strong className="text-blue-400">Authentication:</strong> Integrated JWT-based authentication to enhance security.
               </li>
               <li>
-                <strong className="text-blue-400">Template Integration:</strong>{" "}
-                Used Django templating language to render dynamic content and
-                user-specific pages.
+                <strong className="text-blue-400">Database Optimization:</strong> Leveraged MongoDB Atlas for efficient data handling and scalability.
               </li>
               <li>
-                <strong className="text-blue-400">Deployment:</strong>{" "}
-                Successfully deployed the application on a live server, ensuring
-                scalability.
+                <strong className="text-blue-400">File Management:</strong> Utilized UploadThing for seamless file uploads.
               </li>
             </ul>
 
             <p className="text-justify">
-              This project helped me understand Django&apos;s powerful framework
-              and equipped me with experience in handling real-world web
-              applications.
+              This project greatly improved my understanding of full-stack development using Next.js, MongoDB, and modern web technologies.
             </p>
           </div>
         </div>
@@ -250,6 +226,7 @@ export function Django() {
     </div>
   );
 }
+
 export function Balance_management() {
   // State to control visibility of vardiv
   const [isVisible, setIsVisible] = useState(false);
