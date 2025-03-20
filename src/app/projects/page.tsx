@@ -1,5 +1,5 @@
 import Header from "../components/projects/header";
-import { Lostronaunt, Django } from "../components/projects/old-2";
+import { Lostronaunt, Django, Balance_management } from "../components/projects/old-2";
 import Ecommerce from "../components/projects/e-commerce";
 export default function Projects() {
   return (
@@ -11,6 +11,7 @@ export default function Projects() {
         <Header />
         <div className="space-y-5">
         <hr className="my-10 border-amber-400" />
+        <Balance_management />
         <Ecommerce />
         <Lostronaunt />
         <Django />
