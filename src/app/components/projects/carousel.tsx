@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Image from "next/image"; // Added import for next/image
 
 interface CarouselItem {
   id: number;
@@ -73,10 +74,10 @@ const FocusCarousel: React.FC = () => {
     }, 5000); // Auto-scroll every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [items.length,scrollTo]);
 
   const handleDragEnd = (
-    e: any,
+    e: MouseEvent | TouchEvent | PointerEvent, // Updated type
     { offset, velocity }: { offset: { x: number }; velocity: { x: number } }
   ): void => {
     const swipe = Math.abs(offset.x) * velocity.x;
@@ -113,10 +114,11 @@ const FocusCarousel: React.FC = () => {
               target={item.target}
               className="block w-full h-full relative"
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover"
+                layout="fill" // Ensures the image fills the container
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
                     "https://images.unsplash.com/photo-1682687220199-d0124f48f95b";

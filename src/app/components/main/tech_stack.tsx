@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type TechStackItem = {
   id: number;
   label: string;
@@ -5,14 +7,14 @@ type TechStackItem = {
 };
 
 const techStack: TechStackItem[] = [
-  { id: 1, label: "Next Js", logo: <img src={"/svgs/tech_stack/nextjs.svg"} alt="Next Js Logo" className="h-6 w-6" /> },
-  { id: 2, label: "React Js", logo: <img src={'/svgs/tech_stack/reactjs.svg'} alt="React Js Logo" className="h-6 w-6" /> },
-  { id: 3, label: "MongoDB", logo: <img src={'/svgs/tech_stack/mongodb.svg'} alt="MongoDB Logo" className="h-6 w-6" /> },
-  { id: 4, label: "Type Script", logo: <img src={'/svgs/tech_stack/typescript.png'} alt="MongoDB Logo" className="h-6 w-6" /> },
-  { id: 5, label: "Auth Js", logo: <img src={'/svgs/tech_stack/auth.png'} alt="MongoDB Logo" className="h-6 w-6" /> },
-  { id: 6, label: "Prisma", logo: <img src={'/svgs/tech_stack/prisma.svg'} alt="Prisma Logo" className="h-6 w-6" /> },
-  { id: 7, label: "Shad CN", logo: <img src={'/svgs/tech_stack/shadcn-ui-seeklogo.png'} alt="Shad CN Logo" className="h-6 w-6" /> },
-  { id: 8, label: "Data tables", logo: <img src={'/svgs/tech_stack/database-table.svg'} alt="Data Tables Logo" className="h-6 w-6" /> },
+  { id: 1, label: "Next Js", logo: <Image src={"/svgs/tech_stack/nextjs.svg"} alt="Next Js Logo" width={24} height={24} className="h-6 w-6" /> },
+  { id: 2, label: "React Js", logo: <Image src={'/svgs/tech_stack/reactjs.svg'} alt="React Js Logo" width={24} height={24} className="h-6 w-6" /> },
+  { id: 3, label: "MongoDB", logo: <Image src={'/svgs/tech_stack/mongodb.svg'} alt="MongoDB Logo" width={24} height={24} className="h-6 w-6" /> },
+  { id: 4, label: "Type Script", logo: <Image src={'/svgs/tech_stack/typescript.png'} alt="TypeScript Logo" width={24} height={24} className="h-6 w-6" /> },
+  { id: 5, label: "Auth Js", logo: <Image src={'/svgs/tech_stack/auth.png'} alt="Auth Js Logo" width={24} height={24} className="h-6 w-6" /> },
+  { id: 6, label: "Prisma", logo: <Image src={'/svgs/tech_stack/prisma.svg'} alt="Prisma Logo" width={24} height={24} className="h-6 w-6" /> },
+  { id: 7, label: "Shad CN", logo: <Image src={'/svgs/tech_stack/shadcn-ui-seeklogo.png'} alt="Shad CN Logo" width={24} height={24} className="h-6 w-6" /> },
+  { id: 8, label: "Data tables", logo: <Image src={'/svgs/tech_stack/database-table.svg'} alt="Data Tables Logo" width={24} height={24} className="h-6 w-6" /> },
 ];
 
 export default function Tech_Stack() {

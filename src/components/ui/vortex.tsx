@@ -233,7 +233,7 @@ canvas: HTMLCanvasElement
         resize(canvas);
       }
     });
-  }, []);
+  }, [resize,setup]);
 
   return (
     <div className={cn("relative h-max  w-full", props.containerClassName)}>
