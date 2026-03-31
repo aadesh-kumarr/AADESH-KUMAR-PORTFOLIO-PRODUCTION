@@ -12,18 +12,18 @@ interface Project {
   tech: string[];
   impact: string;
   image?: string; // Optional Parameter
-  github?: string; 
-  live?: string;   
+  github?: string;
+  live?: string;
 }
 
 const projects: Project[] = [
   {
-    title: "E-Commerce + Blog Platform",
-    category: "Full-Stack Development",
-    description: "Built a distributed service architecture using Next.js 16. Optimized organic discovery through strategic SEO schema implementation [cite: 33-37].",
-    tech: ["Next.js 16", "PostgreSQL", "Redis", "GitHub Actions"],
-    impact: "Drove 1k+ organic impressions within 90 days[cite: 37].",
-    image: "/JappTattva.png", 
+    title: "Japp-tattva (Brand & Platform)",
+    category: "Brand Engineering & Full-Stack",
+    description: "Architected the complete digital identity and web presence for a spiritual/lifestyle brand. Managed multi-channel social media integration and content strategy to establish brand authority.",
+    tech: ["Next.js", "Tailwind CSS", "SEO (Schema.org)", "Marketing Automation"],
+    impact: "Launched 0-to-1 brand presence with integrated content management.",
+    image: "/JappTattva.png",
     live: "https://japptattva.com"
   },
   {
@@ -57,10 +57,10 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-neutral-950 py-20 px-6 relative antialiased">
       <BackgroundBeams />
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-white tracking-tighter"
@@ -84,8 +84,8 @@ export default function Projects() {
               {/* Optional Image Container */}
               {project.image ? (
                 <div className="relative h-64 w-full overflow-hidden">
-                  <Image 
-                    src={project.image} 
+                  <Image
+                    src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
