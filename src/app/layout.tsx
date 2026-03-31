@@ -3,6 +3,7 @@ import SideBar from "./components/main/sidebar";
 import Resume from "./components/main/resume";
 import Navbar from "./components/main/navbar";
 import Footer from "./components/main/footer";
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <head>
         {/* SEO-friendly font preloading */}
         <link rel="icon" href="/favicon.ico" />
