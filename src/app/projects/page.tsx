@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { Github, ExternalLink, Zap, Folder } from "lucide-react";
+import { Github, ExternalLink, Zap } from "lucide-react";
 
 interface Project {
   title: string;

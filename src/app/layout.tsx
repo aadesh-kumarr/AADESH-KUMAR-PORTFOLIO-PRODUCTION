@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/portrait.webp", 
+        url: "/portrait.jpeg", 
         width: 1200,
         height: 630,
         alt: "Aadesh Kumar Portfolio Banner",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Aadesh Kumar - Web Developer & Programmer",
     description:
       "Portfolio showcasing projects, skills, and expertise in web development.",
-    images: "/portrait.webp", 
+    images: "/portrait.jpeg", 
   },
 };
 
