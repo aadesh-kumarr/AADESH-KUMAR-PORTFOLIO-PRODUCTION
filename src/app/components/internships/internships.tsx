@@ -239,7 +239,7 @@ const cards = [
   }, {
     description: "Web Development Internship",
     title: "Perky Solutions",
-    src: "/perky.webp",
+    src: "/Perky.webp",
     link: "#",
     content: () => {
       return (
