@@ -33,7 +33,7 @@ export default function ExpandableCardDemo() {
 
   return (
     <>
-    <Lamp />
+      <Lamp />
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -202,80 +202,155 @@ export const CloseIcon = () => {
 };
 
 const cards = [
-    {
-      description: "Machine Learning and Data Science",
-      title: "Edureka!",
-      src: "/online_certificates/edureka_data_science_internship.webp",
-      link: "/online_certificates/edureka_data_science_internship.webp",
-      content: () => {
-        return (
-          <div className="flex flex-col md:flex-row gap-4 w-full ">
-            <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900 ">
-              <p className="text-stone-200">
-                Completed a{" "}
-                <span className="font-bold">
-                  2-month machine learning internship
-                </span>
-                , gaining hands-on experience in:
-              </p>
-              <ul className="list-disc ml-5 font-semibold text-stone-200">
-                <li>Supervised learning</li>
-                <li>Unsupervised learning</li>
-                <li>Reinforcement learning</li>
-              </ul>
-            </div> 
-            <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-              <p className="text-stone-200">
-                Worked in a{" "}
-                <span className="font-bold">team of 20 members</span> to develop
-                models, implementing key algorithms like:
-              </p>
-              <ul className="list-disc ml-5 font-semibold text-stone-200">
-                <li>Linear regression</li>
-                <li>Decision trees</li>
-                <li>Neural networks</li>
-              </ul>
-            </div>
+  {
+    description: "Full Stack Developer",
+    title: "CIS IT Solutions",
+    src: "/CISIT.jpeg",
+    link: "#",
+    content: () => {
+      return (
+        <div className="flex flex-col gap-4 w-full">
+          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
+            <p className="text-stone-200">
+              Currently working as a{" "}
+              <span className="font-bold">Full Stack Developer</span>, contributing
+              to the design and development of scalable web applications.
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Built and maintained dashboards, admin panels, and SaaS modules</li>
+              <li>Developed REST APIs and integrated third-party services</li>
+              <li>Worked on multi-tenant architecture and role-based access control</li>
+            </ul>
           </div>
-        );
-      },
-    },
-    {
-      description: "Market Analysis and Web Development",
-      title: "Lostronaunt",
-      src: "/online_certificates/lostronaunt.webp",
-      link: "/online_certificates/lostronaunt.webp",
-      content: () => {
-        return (
-          <div className="flex flex-col  gap-4 w-full mt-5">
-            <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
-              <p className="text-stone-200">
-                Completed a <span className="font-bold">1-month internship</span> in
-                market analysis and web development, gaining hands-on experience in:
-              </p>
-              <ul className="list-disc ml-5 font-semibold text-stone-200">
-                <li>Analyzing market trends and customer behavior</li>
-                <li>App development focusing on user-centric design</li>
-              </ul>
-            </div>
-            <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-              <p className="text-stone-200">
-                Worked as a <span className="font-bold">full stack developer</span> and implemented features like:
-              </p>
-              <ul className="list-disc ml-5 font-semibold text-stone-200">
-                <li>Node.js and Next.js for backend and frontend</li>
-                <li>Single-handedly created a functional web app</li>
-              </ul>
-            </div>
-            <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-              <p className="text-stone-200 font-bold">Key Accomplishment</p>
-              <p className="text-stone-200">
-                Successfully created a web-app that reduced paperwork by 70%.
-              </p>
-            </div>
+
+          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
+            <p className="text-stone-200">
+              Tech stack and responsibilities include:
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Next.js, React, Tailwind CSS</li>
+              <li>Backend APIs, caching (Redis), cron jobs</li>
+              <li>Performance optimization and clean code practices</li>
+            </ul>
           </div>
-        );
-      },
+        </div>
+      );
     },
-  ];
-  
+  }, {
+    description: "Web Development Internship",
+    title: "Perky Solutions",
+    src: "/perky.webp",
+    link: "#",
+    content: () => {
+      return (
+        <div className="flex flex-col gap-4 w-full">
+          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
+            <p className="text-stone-200">
+              Completed a{" "}
+              <span className="font-bold">web development internship</span>, working
+              on real-world projects with a focus on frontend and backend
+              integration.
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Developed responsive UI components using HTML, CSS, and JavaScript</li>
+              <li>Worked on backend integration and API consumption</li>
+              <li>Collaborated with senior developers on feature implementation</li>
+            </ul>
+          </div>
+
+          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
+            <p className="text-stone-200">
+              Key learnings and contributions:
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Hands-on experience with real client requirements</li>
+              <li>Improved understanding of production-ready code</li>
+              <li>Exposure to development workflows and best practices</li>
+            </ul>
+          </div>
+        </div>
+      );
+    },
+  },
+
+
+  {
+    description: "Machine Learning & Data Science Internship",
+    title: "Edureka",
+    src: "/online_certificates/edureka_data_science_internship.webp",
+    link: "/online_certificates/edureka_data_science_internship.webp",
+    content: () => {
+      return (
+        <div className="flex flex-col md:flex-row gap-4 w-full">
+          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
+            <p className="text-stone-200">
+              Completed a{" "}
+              <span className="font-bold">2-month internship</span> focused on
+              machine learning fundamentals and practical implementation.
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Supervised and unsupervised learning techniques</li>
+              <li>Model evaluation and data preprocessing</li>
+              <li>Basic neural network concepts</li>
+            </ul>
+          </div>
+
+          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
+            <p className="text-stone-200">
+              Collaborated in a{" "}
+              <span className="font-bold">20-member team</span> to implement and test
+              ML models using:
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Linear regression</li>
+              <li>Decision trees</li>
+              <li>Introductory neural networks</li>
+            </ul>
+          </div>
+        </div>
+      );
+    },
+  },
+
+  {
+    description: "Market Analysis & Full Stack Development",
+    title: "Lostronaunt",
+    src: "/online_certificates/lostronaunt.webp",
+    link: "/online_certificates/lostronaunt.webp",
+    content: () => {
+      return (
+        <div className="flex flex-col gap-4 w-full mt-5">
+          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
+            <p className="text-stone-200">
+              Completed a{" "}
+              <span className="font-bold">1-month internship</span> focusing on
+              market research and full-stack web development.
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Market trend analysis and requirement gathering</li>
+              <li>User-centric application design</li>
+            </ul>
+          </div>
+
+          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
+            <p className="text-stone-200">
+              Worked as a <span className="font-bold">Full Stack Developer</span>:
+            </p>
+            <ul className="list-disc ml-5 font-semibold text-stone-200">
+              <li>Built frontend and backend using Next.js and Node.js</li>
+              <li>Independently developed a complete functional web application</li>
+            </ul>
+          </div>
+
+          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
+            <p className="text-stone-200 font-bold">Key Achievement</p>
+            <p className="text-stone-200">
+              Developed a web application that reduced manual paperwork by{" "}
+              <span className="font-bold">70%</span>.
+            </p>
+          </div>
+        </div>
+      );
+    },
+  },
+];

@@ -16,7 +16,7 @@ export default function Lamp() {
         }}
         className=" bg-gradient-to-br from-stone-300 to-dtone-500  bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Internships
+        Experience
       </motion.h1>
     </LampContainer>
   );
