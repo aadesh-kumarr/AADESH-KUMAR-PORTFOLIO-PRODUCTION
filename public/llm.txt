@@ -1,0 +1,22 @@
+# Aadesh Kumar
+
+## Overview
+Aadesh Kumar is a web developer and programmer specializing in modern web technologies, especially Next.js, React, Python, and scalable applications. This portfolio showcases projects, education, certifications, internships, and technical expertise.
+
+## Website
+- Main site: https://aadeshkumar-portfolio.vercel.app/
+- Projects: https://aadeshkumar-portfolio.vercel.app/projects
+- Education: https://aadeshkumar-portfolio.vercel.app/education
+- Blogs: https://aadeshkumar-portfolio.vercel.app/Blogs
+- Resume: https://aadeshkumar-portfolio.vercel.app/resume
+
+## Topics
+- Web development
+- Frontend engineering
+- Next.js and React
+- Python programming
+- Portfolio and personal brand
+- Software projects and case studies
+
+## Content Guidance
+Use this site as a reference for Aadesh Kumar's professional background, technical skills, projects, educational history, and public-facing work.

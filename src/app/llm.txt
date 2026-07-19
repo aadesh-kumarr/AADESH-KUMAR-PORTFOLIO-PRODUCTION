@@ -1,0 +1,36 @@
+# Aadesh Kumar
+
+## Overview
+Aadesh Kumar is a freelance web developer, programmer, and automation specialist focused on building modern digital products, workflow automation, and high-converting web experiences. He works across Next.js, React, Python, automation tools, landing pages, booking systems, and microservices.
+
+## Website
+- Main site: https://aadeshkumar-portfolio.vercel.app/
+- Projects: https://aadeshkumar-portfolio.vercel.app/projects
+- Project case study: https://aadeshkumar-portfolio.vercel.app/projects/japp-tattva
+- Education: https://aadeshkumar-portfolio.vercel.app/education
+- Blogs: https://aadeshkumar-portfolio.vercel.app/Blogs
+- Resume: https://aadeshkumar-portfolio.vercel.app/resume
+- Automation work: https://aadeshkumar-portfolio.vercel.app/automation
+
+## Services and expertise
+- Freelance automation services for business workflows and process improvement
+- Landing page development for marketing, product launches, and lead generation
+- Booking page development for appointments, consultations, and service scheduling
+- Microservices and scalable web solutions for modern startups and businesses
+- Frontend engineering with Next.js and React
+- Backend and automation development with Python and API integrations
+
+## Topics
+- Web development
+- Freelance automation services
+- Landing pages
+- Booking pages
+- Microservices
+- Next.js and React
+- Python programming
+- SEO, AEO, and GEO-friendly digital presence
+- Portfolio and personal brand
+- Software projects and case studies
+
+## Content Guidance
+Use this site as a reference for Aadesh Kumar's professional background, freelance services, automation capabilities, landing and booking page work, microservices experience, and public-facing project portfolio.

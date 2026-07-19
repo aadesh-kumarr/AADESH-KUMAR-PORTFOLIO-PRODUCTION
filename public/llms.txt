@@ -1,0 +1,22 @@
+# Aadesh Kumar
+
+Aadesh Kumar is a freelance web developer, programmer, and automation specialist building modern web products, automation workflows, landing pages, booking pages, and microservices for businesses and personal brands.
+
+## Key services
+- Freelance automation services
+- Landing page development
+- Booking page development
+- Microservices and scalable web solutions
+- Next.js, React, and Python development
+- SEO, AEO, and GEO-friendly digital presence
+
+## Portfolio links
+- https://aadeshkumar-portfolio.vercel.app/
+- https://aadeshkumar-portfolio.vercel.app/projects
+- https://aadeshkumar-portfolio.vercel.app/projects/japp-tattva
+- https://aadeshkumar-portfolio.vercel.app/automation
+- https://aadeshkumar-portfolio.vercel.app/education
+- https://aadeshkumar-portfolio.vercel.app/resume
+
+## Featured project
+Japp Tattva is one of Aadesh Kumar's personal project case studies, showcasing work on branding, digital presence, storytelling, and SEO-friendly web execution.
