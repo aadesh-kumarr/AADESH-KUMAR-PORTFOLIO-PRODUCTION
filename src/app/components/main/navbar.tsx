@@ -26,6 +26,9 @@ export default function Navbar() {
           <li className="cursor-pointer hover:text-amber-400 transition-colors duration-300">
             <Link href="/Blogs" className=" anim">Blogs</Link>
           </li>
+          <li className="cursor-pointer hover:text-amber-400 transition-colors duration-300">
+            <Link href="/automation" className="anim">Automation</Link>
+          </li>
         </ul>
 
         <Link
