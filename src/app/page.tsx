@@ -9,7 +9,7 @@ import { useRef } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 import Link from "next/link";
-import SocialProfiles from "./components/main/social_profiles";
+// import SocialProfiles from "./components/main/social_profiles";
 
 export default function Home() {
   const internshipRef = useRef<HTMLDivElement | null>(null);
