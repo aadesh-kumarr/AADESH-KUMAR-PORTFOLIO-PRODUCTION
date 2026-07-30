@@ -56,7 +56,7 @@ export default function Home() {
               </Link>
 
               {/* ✅ Find me on — Upwork & Product Hunt */}
-              <SocialProfiles />
+              {/* <SocialProfiles /> */}
             </div>
 
             <div>
