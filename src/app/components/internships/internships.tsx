@@ -203,7 +203,7 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Full Stack Developer",
+    description: "Full-Stack & Automation Developer",
     title: "CIS IT Solutions",
     src: "/CISIT.jpeg",
     link: "#",
@@ -212,32 +212,33 @@ const cards = [
         <div className="flex flex-col gap-4 w-full">
           <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
             <p className="text-stone-200">
-              Currently working as a{" "}
-              <span className="font-bold">Full Stack Developer</span>, contributing
-              to the design and development of scalable web applications.
+              <span className="font-bold">April 2025 \u2014 Present.</span> Sole developer
+              across five production products: Fesensi, Artisan, CXScore360,
+              Nakshatra and PlutoCRM.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Built and maintained dashboards, admin panels, and SaaS modules</li>
-              <li>Developed REST APIs and integrated third-party services</li>
-              <li>Worked on multi-tenant architecture and role-based access control</li>
+              <li>Owned the frontend end to end and contributed backend architecture on each product</li>
+              <li>Rebuilt the Fesensi backend for multi-tenancy under senior mentorship</li>
+              <li>Built and deployed AI agents for after-sales support, astrology consultation and CRM automation</li>
+              <li>Designed an n8n and SERP API pipeline that researches, writes and publishes content autonomously</li>
             </ul>
           </div>
 
           <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-            <p className="text-stone-200">
-              Tech stack and responsibilities include:
-            </p>
+            <p className="text-stone-200">Engineering practice:</p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Next.js, React, Tailwind CSS</li>
-              <li>Backend APIs, caching (Redis), cron jobs</li>
-              <li>Performance optimization and clean code practices</li>
+              <li>Load testing with K6 and Grafana to surface bottlenecks before release</li>
+              <li>Unit and integration test suites with Vitest, Jest and Supertest</li>
+              <li>Socket.io real-time features, Agora video consultation, Razorpay payments</li>
+              <li>Excalidraw architecture reviews before implementation; mentored three junior developers</li>
             </ul>
           </div>
         </div>
       );
     },
-  }, {
-    description: "Web Development Internship",
+  },
+  {
+    description: "Junior Frontend Developer",
     title: "Perky Solutions",
     src: "/Perky.webp",
     link: "#",
@@ -246,33 +247,27 @@ const cards = [
         <div className="flex flex-col gap-4 w-full">
           <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
             <p className="text-stone-200">
-              Completed a{" "}
-              <span className="font-bold">web development internship</span>, working
-              on real-world projects with a focus on frontend and backend
-              integration.
+              <span className="font-bold">December 2024 \u2014 March 2025.</span> Frontend
+              development on dashboard and data-heavy interfaces.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Developed responsive UI components using HTML, CSS, and JavaScript</li>
-              <li>Worked on backend integration and API consumption</li>
-              <li>Collaborated with senior developers on feature implementation</li>
+              <li>Built dynamic dashboards and advanced data tables with sorting, filtering and pagination</li>
+              <li>Handled datasets of 10,000+ rows without degrading interface performance</li>
+              <li>Improved UI consistency and reduced development time by 20%</li>
             </ul>
           </div>
 
           <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-            <p className="text-stone-200">
-              Key learnings and contributions:
-            </p>
+            <p className="text-stone-200">Takeaways:</p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Hands-on experience with real client requirements</li>
-              <li>Improved understanding of production-ready code</li>
-              <li>Exposure to development workflows and best practices</li>
+              <li>Responsive, cross-browser compatible interfaces as a baseline requirement</li>
+              <li>First exposure to production release cycles and real client requirements</li>
             </ul>
           </div>
         </div>
       );
     },
   },
-
 
   {
     description: "Machine Learning & Data Science Internship",

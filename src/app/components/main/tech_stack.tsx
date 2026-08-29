@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 type TechItem = {
   label: string;
@@ -7,74 +7,101 @@ type TechItem = {
 
 type TechCategory = {
   title: string;
+  blurb: string;
   items: TechItem[];
 };
 
 const categories: TechCategory[] = [
   {
-    title: "Frontend & Core",
+    title: "AI & Automation",
+    blurb: "Agent workflows, model orchestration and pipelines that run unattended.",
     items: [
+      { label: "n8n", logoPath: "/svgs/tech_stack/N8n-logo-new.svg.png" },
       { label: "Next.js", logoPath: "/svgs/tech_stack/nextjs.svg" },
+      { label: "Node.js", logoPath: "/svgs/tech_stack/Node.js_logo.svg.webp" },
+      { label: "GitHub Actions", logoPath: "/svgs/tech_stack/github-actions.svg" },
+    ],
+  },
+  {
+    title: "Application Layer",
+    blurb: "Type-safe interfaces and APIs, built to be maintained by someone else later.",
+    items: [
       { label: "React.js", logoPath: "/svgs/tech_stack/reactjs.svg" },
       { label: "TypeScript", logoPath: "/svgs/tech_stack/typescript.png" },
       { label: "Tailwind CSS", logoPath: "/svgs/tech_stack/Tailwind_CSS_Logo.svg.png" },
+      { label: "Auth.js", logoPath: "/svgs/tech_stack/auth.png" },
     ],
   },
   {
-    title: "Backend & Database",
+    title: "Data & Infrastructure",
+    blurb: "Multi-tenant schemas, caching and the load testing that keeps them honest.",
     items: [
-      { label: "Node.js", logoPath: "/svgs/tech_stack/Node.js_logo.svg.webp" },
       { label: "PostgreSQL", logoPath: "/svgs/tech_stack/postgress.png" },
       { label: "MongoDB", logoPath: "/svgs/tech_stack/mongodb.svg" },
       { label: "Prisma", logoPath: "/svgs/tech_stack/prisma.svg" },
-    ],
-  },
-  {
-    title: "Automation & Infrastructure",
-    items: [
-      { label: "n8n (AI)", logoPath: "/svgs/tech_stack/N8n-logo-new.svg.png" },
       { label: "Redis", logoPath: "/svgs/tech_stack/redis.png" },
-      { label: "Auth.js", logoPath: "/svgs/tech_stack/auth.png" },
-      { label: "GitHub Actions", logoPath: "/svgs/tech_stack/github-actions.svg" },
     ],
   },
 ];
 
+const alsoUsing = [
+  "Express",
+  "REST APIs",
+  "Socket.io",
+  "OAuth 2.0",
+  "JWT",
+  "Mongoose",
+  "Vitest",
+  "Jest",
+  "Supertest",
+  "K6",
+  "Grafana",
+  "Razorpay",
+  "Vercel",
+  "Cloudflare",
+  "Google Search Console",
+];
+
 export default function Tech_Stack() {
   return (
-    <section className="mt-12 mx-auto max-w-6xl px-5 py-10 bg-neutral-900 border border-neutral-800 rounded-2xl shadow-2xl">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-white mb-2">Technical Ecosystem</h2>
-        <div className="h-1 w-20 bg-amber-400 mx-auto rounded-full"></div>
-        <p className="text-neutral-400 mt-4 max-w-lg mx-auto">
-          Architecting scalable full-stack solutions with a focus on performance, 
-          type-safety, and automated workflows.
+    <section className="mx-auto mt-8 max-w-6xl rounded-2xl border border-neutral-800 bg-neutral-900 px-5 py-12 shadow-2xl">
+      <div className="mb-10 text-center">
+        <h2 className="mb-2 text-3xl font-bold text-white">Technical Ecosystem</h2>
+        <div className="mx-auto h-1 w-20 rounded-full bg-amber-400"></div>
+        <p className="mx-auto mt-4 max-w-lg text-neutral-400">
+          Automation first, then the application and data layers that make it
+          worth automating.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {categories.map((category, index) => (
-          <div 
-            key={index} 
-            className="p-6 bg-neutral-800/50 border border-neutral-700 rounded-xl hover:border-amber-400/50 transition-colors duration-300"
+          <div
+            key={index}
+            className="rounded-xl border border-neutral-700 bg-neutral-800/50 p-6 transition-colors duration-300 hover:border-amber-400/50"
           >
-            <h3 className="text-amber-400 font-semibold mb-6 text-sm uppercase tracking-widest">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-amber-400">
               {category.title}
             </h3>
+            <p className="mb-6 mt-2 text-xs leading-relaxed text-neutral-500">
+              {category.blurb}
+            </p>
             <div className="grid grid-cols-2 gap-4">
               {category.items.map((item, i) => (
-                <div 
-                  key={i} 
-                  className="flex flex-col items-center justify-center p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:scale-105 transition-transform cursor-default"
+                <div
+                  key={i}
+                  className="flex cursor-default flex-col items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900 p-3 transition-transform hover:scale-105"
                 >
-                  <Image 
-                    src={item.logoPath} 
-                    alt={`${item.label} logo`} 
-                    width={32} 
-                    height={32} 
-                    className="mb-2  transition-all duration-300"
+                  <Image
+                    src={item.logoPath}
+                    alt={`${item.label} logo`}
+                    width={32}
+                    height={32}
+                    className="mb-2 transition-all duration-300"
                   />
-                  <span className="text-xs text-neutral-300 font-medium">{item.label}</span>
+                  <span className="text-xs font-medium text-neutral-300">
+                    {item.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -82,12 +109,20 @@ export default function Tech_Stack() {
         ))}
       </div>
 
-      <div className="mt-10 flex flex-wrap justify-center gap-3 text-neutral-500 text-sm italic">
-        <span>#DistributedSystems</span>
-        <span>•</span>
-        <span>#SystemDesign</span>
-        <span>•</span>
-        <span>#PerformanceMonitoring</span>
+      <div className="mt-10 border-t border-neutral-800 pt-8">
+        <p className="mb-4 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+          Also working with
+        </p>
+        <div className="flex flex-wrap justify-center gap-2">
+          {alsoUsing.map((t) => (
+            <span
+              key={t}
+              className="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-neutral-400"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

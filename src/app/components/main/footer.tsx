@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/projects" className="anim">
             Projects
             </Link>
-            <Link href="/blogs" className="anim">
+            <Link href="/Blogs" className="anim">
             Blogs
             </Link> 
             <Link href="/automation" className="anim">

@@ -11,17 +11,11 @@ import {
 
 export function Certificates() {
   const certificates = [
-    { certificate: "/online_certificates/webdevworkshop.jpg", name: "Web development Workshop" },
-    { certificate: "/online_certificates/collegetocorporaee.png", name: "Collegue to Corporatee by DR SUMIT GUPTA UPES" },
-    { certificate: "/online_certificates/KAGGLE.png", name: "python by Kaggle GOOGLE CERTIFIED" },
+    { certificate: "/online_certificates/webdevworkshop.jpg", name: "Web Development Workshop" },
+    { certificate: "/online_certificates/collegetocorporaee.png", name: "College to Corporate by Dr Sumit Gupta, UPES" },
     { certificate: "/online_certificates/kimo_introduction.png", name: "Introduction to AI/ML by Kimo" },
-    { certificate: "/online_certificates/openweaver_python.png", name: "Basics of Python by Openweaver" },
-    { certificate: "/online_certificates/perfect_elearning_python.png", name: "Python and Machine learning by Perfect Elearning" },
-    { certificate: "/online_certificates/perfect_ elearning_data-structure.jpg", name: "Data Structures in Python by Perfect Elearning" },
-    { certificate: "/online_certificates/PERFECT_ELEARNING.jpg", name: "Python by Perfect Elearning" },
-    { certificate: "/online_certificates/thinqbator_chatbot.png", name: "Chatbot by CiscoThinqbator" },
-    { certificate: "/online_certificates/uptoskills_python_workshop.png", name: "Python by Uptoskills" },
-    { certificate: "/online_certificates/internshaala_brain_booster.png", name: "Brain Booster Quiz by InternsShaala" }
+    { certificate: "/online_certificates/thinqbator_chatbot.png", name: "Chatbot by Cisco Thinqbator" },
+    { certificate: "/online_certificates/internshaala_brain_booster.png", name: "Brain Booster Quiz by Internshala" }
   ];
 
   return (

@@ -18,39 +18,50 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Japp-tattva (Brand & Platform)",
-    category: "Brand Engineering & Full-Stack",
-    description: "Architected the complete digital identity and web presence for a spiritual/lifestyle brand. Managed multi-channel social media integration and content strategy to establish brand authority.",
-    tech: ["Next.js", "Tailwind CSS", "SEO (Schema.org)", "Marketing Automation"],
-    impact: "Launched 0-to-1 brand presence with integrated content management.",
-    image: "/JappTattva.png",
-    live: "https://japptattva.com"
+    title: "Decoded Person",
+    category: "Autonomous Content Platform",
+    description:
+      "An automated tech-news desk. 20 RSS sources feed an LLM triage step, then full-text scraping, a fact-validation agent and a quality gate before anything publishes \u2014 with deduplication against Postgres at every stage. A single workflow then distributes each story to YouTube, Instagram, LinkedIn and Discord, including resumable chunked media uploads.",
+    tech: ["Next.js 16", "React 19", "Prisma 7", "PostgreSQL", "n8n", "Multi-model LLM", "IndexNow"],
+    impact: "Average Google position 8.1 with 522 impressions in its first week live.",
+    live: "https://decodedperson.com",
   },
   {
-    title: "AI Agent Workflows",
+    title: "Japp Tattva",
+    category: "E-Commerce & Content Engine",
+    description:
+      "A storefront, admin backend and headless blog platform in one monorepo, with Redis caching, scheduled cron jobs and payment integration. Behind it runs a 109-node content pipeline \u2014 research, write, audit, SEO, publish \u2014 that falls back across GPT, Gemini and Llama when a model fails, plus a keyword engine that merges Search Console data with AI candidates and rewrites post metadata automatically.",
+    tech: ["Next.js 16", "Prisma 7", "PostgreSQL", "Redis", "NextAuth", "Razorpay", "n8n"],
+    impact: "3.58K search impressions over three months, trending up roughly 3\u00d7.",
+    image: "/JappTattva.png",
+    live: "https://japptattva.com",
+  },
+  {
+    title: "AI Agents & Workflow Automation",
     category: "Automation (CIS IT Solutions)",
-    description: "Developed multi-step n8n workflows for ticket triage and automated reply drafting to reduce manual intervention[cite: 13].",
-    tech: ["n8n", "AI Workflows", "Node.js", "REST APIs"],
-    impact: "End-to-end business process automation[cite: 13].",
-    // Image omitted to demonstrate optional logic
+    description:
+      "Production AI agents across several products \u2014 after-sales support, astrology consultation and CRM automation \u2014 plus an n8n and SERP API pipeline that researches, writes, SEO-optimises and publishes content on its own. I also took over agents that had stalled for around three months and brought them to production quality.",
+    tech: ["n8n", "AI Agents", "SERP API", "Node.js", "REST APIs"],
+    impact: "Removed the need for a dedicated content and SEO hire.",
+  },
+  {
+    title: "Multi-Tenant SaaS Platform",
+    category: "Backend Architecture (CIS IT Solutions)",
+    description:
+      "Rebuilt the Fesensi backend for multi-tenancy under senior mentorship, removing the architectural limit that blocked onboarding new client organisations. Covered by unit and integration tests, and load-tested with K6 and Grafana so bottlenecks surfaced before release rather than after.",
+    tech: ["Next.js", "Node.js", "Redis", "K6", "Grafana", "Vitest", "Metronic"],
+    impact: "Performance verified under load before release, not after.",
   },
   {
     title: "Bill & Order Tracker",
     category: "Financial Systems",
-    description: "Daily transaction logging app with secure session management via NextAuth and Google OAuth 2.0 [cite: 38-39].",
+    description:
+      "A daily transaction logging and order tracking app with secure session management via NextAuth and Google OAuth 2.0, backed by Prisma and PostgreSQL.",
     tech: ["Next.js 14", "NextAuth", "Prisma", "PostgreSQL"],
-    impact: "Secure relational data management.",
+    impact: "Secure relational data management with OAuth-backed sessions.",
     image: "/billManager.png",
-    live: "https://hardwar-market.vercel.app/home"
+    live: "https://hardwar-market.vercel.app/home",
   },
-  {
-    title: "Multi-tenant SaaS Architecture",
-    category: "Infrastructure (CIS IT Solutions)",
-    description: "Production-grade SaaS implementation focusing on performance through Redis caching and k6 load testing[cite: 14, 17].",
-    tech: ["Next.js", "Redis", "k6", "Grafana", "Metronics"],
-    impact: "Performance verified via real-time Grafana monitoring[cite: 17].",
-    // Image omitted
-  }
 ];
 
 export default function Projects() {
