@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const stats = [
   { value: "5", label: "products shipped\nas sole developer" },
   { value: "2", label: "live automated\nplatforms" },
-  { value: "1.5+", label: "years building\nin production" },
+  { value: "2+", label: "years of\nindustry experience" },
 ];
 
 export default function Hero() {
@@ -34,10 +34,10 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-400">
             I&apos;m <span className="font-semibold text-white">Aadesh Kumar</span> — an
-            <span className="font-medium text-amber-400"> AI automation engineer</span> and
-            full-stack developer. I design AI agent workflows and multi-model LLM pipelines,
-            and I&apos;ve been the sole developer on five production SaaS products at
-            CIS IT Solutions.
+            <span className="font-medium text-amber-400"> AI automation engineer</span>, SEO
+            specialist and full-stack developer with more than two years of industry experience.
+            I design AI agent workflows and search-driven content systems, and I&apos;ve been the
+            sole developer across five production products at CIS IT Solutions.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

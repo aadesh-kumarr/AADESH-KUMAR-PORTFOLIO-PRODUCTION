@@ -5,15 +5,16 @@ import { Timeline } from "@/components/ui/timeline";
 export default function TimelineDemo() {
   const data = [  
     {
-      title: "B.Tech in Computer Science",
+      title: "B.Tech, Computer Science Engineering",
       content: (
         
         <div className="bg-neutral-800 p-5 rounded border-amber-400 border lg:w-1/2">
           <p className="text-neutral-200 font-normal mb-8">
-            Doon Institute of Engineering and Technology <br />Final Year Student (2025)
+            Doon Institute of Engineering and Technology, Rishikesh <br />Graduated in 2025
           </p>
           <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Learned full-stack web development, algorithms, and completed internships with Edureka and Lostronaunt, gaining significant practical experience in coding and technical projects.
+            Built a foundation in computer science, algorithms and full-stack development before
+            moving into professional product engineering, AI automation and search-driven systems.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image

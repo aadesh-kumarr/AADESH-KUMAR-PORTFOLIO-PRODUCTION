@@ -213,14 +213,15 @@ const cards = [
           <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
             <p className="text-stone-200">
               <span className="font-bold">April 2025 \u2014 Present.</span> Sole developer
-              across five production products: Fesensi, Artisan, CXScore360,
-              Nakshatra and PlutoCRM.
+              across five production products spanning multi-tenant SaaS, e-commerce,
+              customer-experience analytics, online consultation and CRM.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
               <li>Owned the frontend end to end and contributed backend architecture on each product</li>
-              <li>Rebuilt the Fesensi backend for multi-tenancy under senior mentorship</li>
+              <li>Rebuilt a client SaaS backend for multi-tenancy under senior mentorship</li>
               <li>Built and deployed AI agents for after-sales support, astrology consultation and CRM automation</li>
               <li>Designed an n8n and SERP API pipeline that researches, writes and publishes content autonomously</li>
+              <li>Monitored technical search health with Google Search Console and Bing Webmaster Tools</li>
             </ul>
           </div>
 

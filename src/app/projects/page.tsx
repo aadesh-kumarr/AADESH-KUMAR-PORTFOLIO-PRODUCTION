@@ -21,7 +21,7 @@ const projects: Project[] = [
     title: "Decoded Person",
     category: "Autonomous Content Platform",
     description:
-      "An automated tech-news desk. 20 RSS sources feed an LLM triage step, then full-text scraping, a fact-validation agent and a quality gate before anything publishes \u2014 with deduplication against Postgres at every stage. A single workflow then distributes each story to YouTube, Instagram, LinkedIn and Discord, including resumable chunked media uploads.",
+      "An automated tech-news desk. 20 RSS sources feed an LLM triage step, then full-text scraping, a fact-validation agent and a quality gate before anything publishes \u2014 with deduplication against Postgres at every stage. A single workflow then distributes each story to YouTube, Instagram, Facebook, LinkedIn and Discord, with SDXL-generated creatives and resumable chunked media uploads.",
     tech: ["Next.js 16", "React 19", "Prisma 7", "PostgreSQL", "n8n", "Multi-model LLM", "IndexNow"],
     impact: "Average Google position 8.1 with 522 impressions in its first week live.",
     live: "https://decodedperson.com",
@@ -30,7 +30,7 @@ const projects: Project[] = [
     title: "Japp Tattva",
     category: "E-Commerce & Content Engine",
     description:
-      "A storefront, admin backend and headless blog platform in one monorepo, with Redis caching, scheduled cron jobs and payment integration. Behind it runs a 109-node content pipeline \u2014 research, write, audit, SEO, publish \u2014 that falls back across GPT, Gemini and Llama when a model fails, plus a keyword engine that merges Search Console data with AI candidates and rewrites post metadata automatically.",
+      "A storefront, admin backend and headless blog platform in one monorepo, with Redis caching, scheduled cron jobs and payment integration. Behind it runs a 109-node content pipeline \u2014 research, write, audit, SEO, publish \u2014 with automatic model fallback, a Search Console-powered keyword engine, a HARO outreach agent and a session-aware AI concierge.",
     tech: ["Next.js 16", "Prisma 7", "PostgreSQL", "Redis", "NextAuth", "Razorpay", "n8n"],
     impact: "3.58K search impressions over three months, trending up roughly 3\u00d7.",
     image: "/JappTattva.png",
@@ -48,7 +48,7 @@ const projects: Project[] = [
     title: "Multi-Tenant SaaS Platform",
     category: "Backend Architecture (CIS IT Solutions)",
     description:
-      "Rebuilt the Fesensi backend for multi-tenancy under senior mentorship, removing the architectural limit that blocked onboarding new client organisations. Covered by unit and integration tests, and load-tested with K6 and Grafana so bottlenecks surfaced before release rather than after.",
+      "Rebuilt a client SaaS backend for multi-tenancy under senior mentorship, removing the architectural limit that blocked onboarding new client organisations. Covered by unit and integration tests, and load-tested with K6 and Grafana so bottlenecks surfaced before release rather than after.",
     tech: ["Next.js", "Node.js", "Redis", "K6", "Grafana", "Vitest", "Metronic"],
     impact: "Performance verified under load before release, not after.",
   },

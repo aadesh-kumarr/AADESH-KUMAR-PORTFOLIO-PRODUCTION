@@ -56,7 +56,7 @@ const ResumePage: React.FC = () => {
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-white">Résumé</h1>
             <p className="mt-1 text-sm text-neutral-500">
-              Aadesh Kumar — AI Automation Engineer &amp; Full-Stack Developer
+              Aadesh Kumar — AI Automation Engineer, SEO Specialist &amp; Full-Stack Developer
             </p>
           </div>
           <a

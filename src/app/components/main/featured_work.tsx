@@ -33,7 +33,7 @@ const products: Product[] = [
     points: [
       "20 sources feed an LLM triage step, then full-text scraping, a fact-validation agent and a quality gate before anything publishes.",
       "Every story is deduplicated against Postgres at each stage, so the same news never ships twice.",
-      "One workflow distributes to YouTube, Instagram, LinkedIn and Discord, including resumable chunked media uploads.",
+      "One workflow distributes to YouTube, Instagram, Facebook, LinkedIn and Discord, including resumable chunked media uploads.",
     ],
   },
   {
@@ -52,6 +52,7 @@ const products: Product[] = [
       "Storefront, admin backend and a headless blog platform in one monorepo, with Redis caching, cron jobs and payments.",
       "A 109-node content pipeline runs research → write → audit → SEO → publish, falling back across GPT, Gemini and Llama when a model fails.",
       "A keyword engine merges Search Console data with AI candidates, scores each 0–100, and rewrites post metadata automatically.",
+      "A HARO outreach agent filters irrelevant journalist queries, while an AI concierge routes intent and looks up the live product catalogue.",
     ],
   },
 ];

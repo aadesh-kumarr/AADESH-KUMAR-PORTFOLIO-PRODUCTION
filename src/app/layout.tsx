@@ -12,14 +12,16 @@ const SITE_URL = "https://aadeshkumar-portfolio.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Aadesh Kumar — AI Automation Engineer & Full-Stack Developer",
+    default: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
     template: "%s | Aadesh Kumar",
   },
   description:
-    "Aadesh Kumar builds AI agent workflows and production web platforms. Sole developer across five SaaS products, and the engineer behind Japp Tattva and Decoded Person — two live, fully automated content and commerce systems.",
+    "Aadesh Kumar is an AI automation engineer, SEO specialist and full-stack developer with 2+ years of industry experience. He builds AI agents, search-driven systems and production web platforms.",
   keywords: [
     "Aadesh Kumar",
     "AI automation engineer",
+    "SEO specialist",
+    "2+ years industry experience",
     "n8n developer",
     "AI agent workflows",
     "LLM orchestration",
@@ -39,9 +41,9 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Aadesh Kumar — AI Automation Engineer & Full-Stack Developer",
+    title: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
     description:
-      "AI agent workflows, multi-model LLM pipelines and production web platforms. Two live automated products: Japp Tattva and Decoded Person.",
+      "AI automation, technical SEO and production web platforms from an engineer with 2+ years of industry experience.",
     url: SITE_URL,
     siteName: "Aadesh Kumar",
     locale: "en_US",
@@ -51,15 +53,15 @@ export const metadata: Metadata = {
         url: "/portrait.jpeg",
         width: 1200,
         height: 630,
-        alt: "Aadesh Kumar — AI Automation Engineer & Full-Stack Developer",
+        alt: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aadesh Kumar — AI Automation Engineer & Full-Stack Developer",
+    title: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
     description:
-      "AI agent workflows, multi-model LLM pipelines and production web platforms.",
+      "AI automation, technical SEO and production web platforms from an engineer with 2+ years of industry experience.",
     images: "/portrait.jpeg",
   },
 };

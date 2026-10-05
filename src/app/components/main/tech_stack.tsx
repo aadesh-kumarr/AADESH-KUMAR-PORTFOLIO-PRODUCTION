@@ -60,6 +60,15 @@ const alsoUsing = [
   "Vercel",
   "Cloudflare",
   "Google Search Console",
+  "IndexNow",
+  "SERP API",
+  "LangChain",
+  "OpenAI",
+  "Gemini",
+  "Llama",
+  "Instagram Graph API",
+  "YouTube Data API",
+  "LinkedIn UGC API",
 ];
 
 export default function Tech_Stack() {

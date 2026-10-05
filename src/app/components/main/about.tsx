@@ -69,23 +69,26 @@ export default function About({ internshipRef }: AboutProps) {
         {/* Main Content */}
         <div className="mx-auto max-w-4xl space-y-6 p-10 text-base leading-relaxed text-neutral-300">
           <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-5xl first-letter:text-amber-400">
-            Hi, I&apos;m <span className="text-lg font-semibold text-white">Aadesh Kumar</span>. I
-            work at <span className="ml-1 font-medium text-amber-400">CIS IT Solutions</span>, where
-            I&apos;ve been the sole developer on five production products — Fesensi, Artisan,
-            CXScore360, Nakshatra and PlutoCRM — owning the frontend end to end and contributing to
-            backend architecture on each.
+            Hi, I&apos;m <span className="text-lg font-semibold text-white">Aadesh Kumar</span>, an
+            AI automation engineer, SEO specialist and full-stack developer with more than two
+            years of industry experience. At{" "}
+            <span className="font-medium text-amber-400">CIS IT Solutions</span>, I&apos;ve been the
+            sole developer on five production products spanning multi-tenant SaaS, e-commerce,
+            customer-experience analytics, online consultation and CRM — owning the frontend end
+            to end and contributing to backend architecture on each.
           </p>
 
           <p>
             The work I care most about is <span className="font-medium text-amber-400">AI automation</span>.
             I build <span className="ml-1 font-medium text-amber-400">n8n</span> workflows and agent
             systems that handle real business logic: content research and publishing, after-sales
-            support, CRM updates, astrology consultations. Not demos — pipelines that run on a
-            schedule and are trusted to publish without review.
+            support, CRM updates and online consultations. I also own the SEO layer — keyword
+            research, technical search health, structured data and automated indexing — that helps
+            those systems rank.
           </p>
 
           <p>
-            On the platform side I helped rebuild a backend for{" "}
+            On the platform side I helped rebuild a client SaaS backend for{" "}
             <span className="font-medium text-amber-400">multi-tenancy</span> under senior
             mentorship. I work with{" "}
             <span className="font-medium text-amber-400">Redis caching</span>,{" "}
