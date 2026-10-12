@@ -10,7 +10,7 @@ interface Project {
   category: string;
   description: string;
   tech: string[];
-  impact: string;
+  impact?: string;
   image?: string; // Optional Parameter
   github?: string;
   live?: string;
@@ -19,64 +19,52 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Decoded Person",
-    category: "Autonomous Content Platform",
+    category: "AI Researcher & Writer",
     description:
-      "An automated tech-news desk. 20 RSS sources feed LLM triage, full-text extraction, fact validation and PostgreSQL deduplication. Publishing reaches YouTube, Instagram, LinkedIn and Discord, including resumable media uploads.",
+      "An AI-based researcher and writer for tech news. It ingests 20 RSS sources, triages stories with an LLM, extracts full text, validates facts and deduplicates against PostgreSQL before publishing.",
     tech: ["Next.js 16", "React 19", "Prisma 7", "PostgreSQL", "n8n", "Multi-model LLM", "IndexNow"],
     impact: "Average Google position 8.1 with 522 impressions in its first week live.",
     live: "https://decodedperson.com",
   },
   {
     title: "Japp Tattva",
-    category: "E-Commerce & Content Engine",
+    category: "AI Product Suggestions & Blog Writing",
     description:
-      "A Next.js storefront, admin backend and headless blog in one monorepo, with Redis caching, scheduled jobs and Razorpay payments. A 109-node n8n pipeline covers research, writing, audit, SEO and publishing with model fallback. A Search Console and AI keyword engine scores topics and updates metadata.",
+      "A commerce platform with an AI chat assistant that suggests products from the catalogue and an AI blog writer. A 109-node n8n pipeline covers research, writing, audit, SEO and publishing with model fallback.",
     tech: ["Next.js 16", "Prisma 7", "PostgreSQL", "Redis", "NextAuth", "Razorpay", "n8n"],
     impact: "1.83K Web impressions and 17 clicks in 28 days in Search Console.",
     image: "/JappTattva.png",
     live: "https://japptattva.com",
   },
   {
-    title: "AI Agents & Workflow Automation",
-    category: "Automation (CIS IT Solutions)",
+    title: "YouTube Podcasts to Shorts",
+    category: "AI Video Automation",
     description:
-      "Extended Fesensi's RAG ticketing agent to create tickets, retrieve files and draft emails. Built Nakshatra chat and reporting agents and Artisan's sales agent, then developed n8n blog agents and a SERP API research-to-publishing pipeline.",
-    tech: ["n8n", "AI Agents", "SERP API", "Node.js", "REST APIs"],
-    impact: "Agent work across ticketing, astrology and commerce products.",
+      "An n8n workflow for turning YouTube podcast content into short-form clips and publishing them.",
+    tech: ["n8n", "YouTube", "Video automation", "Publishing"],
+    live: "https://www.youtube.com/channel/UCvngM-74fgwuy1B89Yw5FrA",
   },
   {
-    title: "Multi-Tenant SaaS Platform",
-    category: "Backend Architecture (CIS IT Solutions)",
+    title: "Filtered Job Search",
+    category: "AI Job Search",
     description:
-      "Rebuilt the Fesensi backend for multi-tenancy under senior mentorship and used K6 with Grafana to identify and address performance bottlenecks.",
-    tech: ["Next.js", "Node.js", "Redis", "K6", "Grafana", "Vitest", "Metronic"],
-    impact: "Multi-tenant backend with load testing and performance analysis.",
+      "A personal job-search workflow that finds opportunities according to selected filters.",
+    tech: ["Job search", "Filtering", "Automation"],
   },
   {
-    title: "CXScore360",
-    category: "Full-Stack Product (CIS IT Solutions)",
+    title: "YouTube Horror Video Generation",
+    category: "AI Video Generation",
     description:
-      "Built a customer-review platform across frontend and backend, from design through implementation.",
-    tech: ["Frontend", "Backend", "Customer reviews"],
-    impact: "Owned implementation across both application layers.",
+      "An n8n workflow for generating horror videos for YouTube.",
+    tech: ["n8n", "AI", "Video generation", "YouTube"],
+    live: "https://www.youtube.com/channel/UCdkpL-je6skbnp0uX7qOCiQ",
   },
   {
     title: "AI Script-to-Video Engine",
     category: "Independent Local Demo",
     description:
-      "Built a locally demonstrable Next.js script-to-video engine with OpenAI scripting, local Hugging Face image models, still-image video assembly, AI scene direction and sound-effect suggestions.",
+      "A separate, locally demonstrable Next.js script-to-video engine with OpenAI scripting, local Hugging Face image models, still-image video assembly, AI scene direction and sound-effect suggestions.",
     tech: ["Next.js", "OpenAI", "Hugging Face", "Video"],
-    impact: "Local demo available on request.",
-  },
-  {
-    title: "Bill & Order Tracker",
-    category: "Financial Systems",
-    description:
-      "A daily transaction logging and order tracking app with secure session management via NextAuth and Google OAuth 2.0, backed by Prisma and PostgreSQL.",
-    tech: ["Next.js 14", "NextAuth", "Prisma", "PostgreSQL"],
-    impact: "Secure relational data management with OAuth-backed sessions.",
-    image: "/billManager.png",
-    live: "https://hardwar-market.vercel.app/home",
   },
 ];
 
@@ -95,7 +83,7 @@ export default function Projects() {
             Built <span className="text-amber-400">&</span> Deployed
           </motion.h1>
           <p className="text-neutral-500 mt-6 max-w-lg mx-auto text-lg italic">
-            Selected professional work and independent projects across full-stack development and AI automation.
+            Personal projects across full-stack development and AI automation.
           </p>
         </div>
 
@@ -140,13 +128,14 @@ export default function Projects() {
                   </h3>
                   <div className="flex gap-3">
                     {project.github && (
-                      <a href={project.github} target="_blank" className="text-neutral-500 hover:text-white transition-colors">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="text-neutral-500 hover:text-white transition-colors">
                         <Github className="w-5 h-5" />
                       </a>
                     )}
                     {project.live && (
-                      <a href={project.live} target="_blank" className="text-neutral-500 hover:text-amber-400 transition-colors">
-                        <ExternalLink className="w-5 h-5" />
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title}`} className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-400 transition-colors hover:text-amber-400">
+                        {project.live.includes("youtube.com") ? "Channel" : "Live site"}
+                        <ExternalLink className="h-4 w-4" />
                       </a>
                     )}
                   </div>
@@ -164,12 +153,14 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="pt-6 border-t border-white/5 flex items-center gap-3 mt-auto">
-                  <Zap className="w-4 h-4 text-amber-400 fill-amber-400/20" />
-                  <span className="text-xs font-semibold text-amber-400/90 uppercase tracking-wider">
-                    {project.impact}
-                  </span>
-                </div>
+                {project.impact && (
+                  <div className="pt-6 border-t border-white/5 flex items-center gap-3 mt-auto">
+                    <Zap className="w-4 h-4 text-amber-400 fill-amber-400/20" />
+                    <span className="text-xs font-semibold text-amber-400/90 uppercase tracking-wider">
+                      {project.impact}
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

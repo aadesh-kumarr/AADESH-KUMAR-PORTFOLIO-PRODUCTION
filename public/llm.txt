@@ -3,14 +3,17 @@
 Aadesh Kumar is a full-stack developer and AI & Automation Engineer based in Haridwar, India. This portfolio presents his professional experience and independent projects for hiring teams.
 
 ## Professional experience
-- CIS IT Solutions (April 2025-present): Full-Stack Engineer; later also AI & Automations Engineer. Built frontends for Fesensi, Artisan and Nakshatra, plus CXScore360 across frontend and backend. Rebuilt the Fesensi backend for multi-tenancy under senior mentorship. Built RAG and API-backed agents for ticketing, astrology and commerce, and n8n content workflows.
-- Perky Solutions (December 2024-March 2025): Junior Frontend Developer. Built dashboards and tables for more than 10,000 rows; reusable UI patterns reduced development time by 20%.
-- Lostronaunt (August-October 2024): Market Analysis & Next.js Development Intern. Built an analytics dashboard with TypeScript, Prisma, MongoDB and NextAuth.
+- CIS IT Solutions (April 2025-present): Full-Stack Engineer; later also AI & Automations Engineer. Professional experience across frontend, backend, API integration, testing and workflow automation.
+- Perky Solutions (December 2024-March 2025): Junior Frontend Developer. Worked on responsive interfaces and reusable UI patterns.
+- Lostronaunt (August-October 2024): Market Analysis & Next.js Development Intern. Worked with Next.js, TypeScript, Prisma and MongoDB.
 
 ## Independent projects
-- Japp Tattva (https://japptattva.com): Next.js commerce, admin and blog platform, plus a 109-node n8n content pipeline and Search Console-powered keyword engine. Search Console recorded 1.83K Web impressions and 17 clicks in 28 days.
-- Decoded Person (https://decodedperson.com): Next.js and PostgreSQL news platform with 20-source RSS ingestion, LLM triage, fact validation and deduplication. Recorded 522 Google impressions and average position 8.1 in its first week.
-- AI Script-to-Video Engine: Locally demonstrable Next.js project using OpenAI scripting and local Hugging Face image models.
+- Japp Tattva (https://japptattva.com): Next.js commerce platform with an AI chat product suggestor, AI blog writer, 109-node n8n content pipeline and Search Console-powered keyword engine. Search Console recorded 1.83K Web impressions and 17 clicks in 28 days.
+- Decoded Person (https://decodedperson.com): AI-based researcher and writer with 20-source RSS ingestion, LLM triage, fact validation and PostgreSQL deduplication. Recorded 522 Google impressions and average position 8.1 in its first week.
+- YouTube Podcasts to Shorts (https://www.youtube.com/channel/UCvngM-74fgwuy1B89Yw5FrA): Personal n8n workflow for converting podcast content into short-form clips and publishing them.
+- YouTube Horror Video Generation (https://www.youtube.com/channel/UCdkpL-je6skbnp0uX7qOCiQ): Personal n8n workflow for generating horror videos for YouTube.
+- Filtered Job Search: Personal n8n workflow for finding opportunities according to selected filters.
+- AI Script-to-Video Engine: Separate local Next.js demo using OpenAI scripting and local Hugging Face image models.
 
 ## Portfolio pages
 - Projects: https://aadeshkumar-portfolio.vercel.app/projects

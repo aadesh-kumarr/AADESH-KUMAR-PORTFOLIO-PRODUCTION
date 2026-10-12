@@ -34,7 +34,7 @@ const categories: TechCategory[] = [
   },
   {
     title: "Data & Infrastructure",
-    blurb: "Multi-tenant schemas, caching and the load testing that keeps them honest.",
+    blurb: "Databases, caching and the tools I use to verify performance.",
     items: [
       { label: "PostgreSQL", logoPath: "/svgs/tech_stack/postgress.png" },
       { label: "MongoDB", logoPath: "/svgs/tech_stack/mongodb.svg" },

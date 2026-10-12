@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const details = [
   {
     title: "Full-stack platform",
-    copy: "Built a Next.js storefront, admin backend and headless blog in one monorepo using PostgreSQL, Prisma, Redis, NextAuth and Razorpay. Added scheduled jobs and a session-aware AI concierge with catalogue lookup.",
+    copy: "Built a Next.js storefront, admin backend and headless blog in one monorepo using PostgreSQL, Prisma, Redis, NextAuth and Razorpay. Added scheduled jobs and an AI chat assistant that suggests products from the catalogue.",
   },
   {
     title: "Content automation",

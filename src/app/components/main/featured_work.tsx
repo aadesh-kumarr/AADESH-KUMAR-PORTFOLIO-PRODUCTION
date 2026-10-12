@@ -22,7 +22,7 @@ const products: Product[] = [
     name: "Decoded Person",
     url: "decodedperson.com",
     href: "https://decodedperson.com",
-    tagline: "An autonomous tech-news desk that researches, verifies and publishes without me.",
+    tagline: "An AI researcher and writer for tech news.",
     icon: <Workflow className="h-5 w-5" />,
     stack: ["Next.js 16", "React 19", "Prisma 7", "PostgreSQL", "n8n", "Multi-model LLM"],
     metrics: [
@@ -40,7 +40,7 @@ const products: Product[] = [
     name: "Japp Tattva",
     url: "japptattva.com",
     href: "https://japptattva.com",
-    tagline: "A full commerce platform with a content engine that writes and optimises itself.",
+    tagline: "Commerce with AI product suggestions and automated blog writing.",
     icon: <ShoppingBag className="h-5 w-5" />,
     stack: ["Next.js 16", "Prisma 7", "PostgreSQL", "Redis", "NextAuth", "Razorpay", "n8n"],
     metrics: [
@@ -52,7 +52,7 @@ const products: Product[] = [
       "Storefront, admin backend and a headless blog platform in one monorepo, with Redis caching, cron jobs and payments.",
       "A 109-node content pipeline runs research → write → audit → SEO → publish, falling back across GPT, Gemini and Llama when a model fails.",
       "A keyword engine merges Search Console data with AI candidates, scores each 0–100, and rewrites post metadata automatically.",
-      "A session-aware AI concierge can look up products in the live catalogue.",
+      "A session-aware AI chat assistant suggests products from the live catalogue.",
     ],
   },
 ];

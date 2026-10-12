@@ -3,7 +3,7 @@ import AutomationClientPage from "./AutomationClientPage";
 
 export const metadata: Metadata = {
   title: "AI Agents & Automation Work",
-  description: "Selected AI agent and n8n automation work by Aadesh Kumar across ticketing, astrology, commerce and independent publishing projects.",
+  description: "Explore Aadesh Kumar's personal AI projects for video publishing, filtered job search, research, blog writing and product suggestions.",
   alternates: { canonical: "/automation" },
 };
 

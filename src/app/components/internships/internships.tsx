@@ -216,21 +216,18 @@ const cards = [
               later also AI &amp; Automations Engineer.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Built frontends for Fesensi, Artisan and Nakshatra; built CXScore360 across frontend and backend</li>
-              <li>Rebuilt the Fesensi backend for multi-tenancy under senior mentorship</li>
-              <li>Built API-backed agents for ticketing, astrology chat and reports, and marketplace sales</li>
-              <li>Developed n8n blog agents and a SERP API research-to-publishing pipeline</li>
-              <li>Monitored technical search health with Google Search Console and Bing Webmaster Tools</li>
+              <li>Full-stack development with React, Next.js, TypeScript and backend APIs</li>
+              <li>AI and workflow automation with n8n, RAG and external APIs</li>
+              <li>Technical search monitoring with Google Search Console and Bing Webmaster Tools</li>
             </ul>
           </div>
 
           <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
             <p className="text-stone-200">Engineering practice:</p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Load testing with K6 and Grafana to surface bottlenecks before release</li>
-              <li>Unit and integration test suites with Vitest, Jest and Supertest</li>
-              <li>Socket.io real-time features, Agora video consultation, Razorpay payments</li>
-              <li>Managed n8n workflows and a Vercel test branch</li>
+              <li>Testing with Vitest, Jest, Supertest, K6 and Grafana</li>
+              <li>Experience with real-time features, video and payment integrations</li>
+              <li>Workflow maintenance and deployment support</li>
             </ul>
           </div>
         </div>
@@ -248,12 +245,11 @@ const cards = [
           <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
             <p className="text-stone-200">
               <span className="font-bold">December 2024 \u2014 March 2025.</span> Frontend
-              development on dashboard and data-heavy interfaces.
+              development on responsive, data-heavy interfaces.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Built dynamic dashboards and advanced data tables with sorting, filtering and pagination</li>
-              <li>Handled datasets of 10,000+ rows without degrading interface performance</li>
-              <li>Improved UI consistency and reduced development time by 20%</li>
+              <li>Built reusable, responsive frontend components</li>
+              <li>Worked with large datasets, sorting, filtering and pagination</li>
             </ul>
           </div>
 
@@ -261,7 +257,7 @@ const cards = [
             <p className="text-stone-200">Takeaways:</p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
               <li>Responsive, cross-browser compatible interfaces as a baseline requirement</li>
-              <li>First exposure to production release cycles and real client requirements</li>
+              <li>Worked within production release cycles and team requirements</li>
             </ul>
           </div>
         </div>
@@ -321,25 +317,25 @@ const cards = [
               and Next.js development internship.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Market trend analysis and requirement gathering</li>
-              <li>User-centric application design</li>
+              <li>Market research and requirements gathering</li>
+              <li>Next.js and TypeScript development</li>
             </ul>
           </div>
 
           <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
             <p className="text-stone-200">
-              Worked as a <span className="font-bold">Full Stack Developer</span>:
+              Technologies used:
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Built an analytics dashboard with Next.js, TypeScript, Prisma, MongoDB and NextAuth</li>
-              <li>Added access control, search, charts and uploads</li>
+              <li>Next.js, TypeScript, Prisma and MongoDB</li>
+              <li>Authentication and frontend data visualization</li>
             </ul>
           </div>
 
           <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
             <p className="text-stone-200 font-bold">Key Achievement</p>
             <p className="text-stone-200">
-              Turned market research findings into dashboard requirements and an implemented application.
+              Applied market research to software requirements.
             </p>
           </div>
         </div>

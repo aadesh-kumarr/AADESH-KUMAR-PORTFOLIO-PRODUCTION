@@ -7,7 +7,7 @@ import { Cover } from "@/components/ui/cover";
 import styles from "./styles.module.css";
 
 const stats = [
-  { value: "4", label: "CIS products\ncontributed to" },
+  { value: "20", label: "RSS sources in\nmy news pipeline" },
   { value: "2", label: "independent\nlive platforms" },
   { value: "109", label: "nodes in my\ncontent workflow" },
 ];
@@ -34,9 +34,9 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-400">
             I&apos;m <span className="font-semibold text-white">Aadesh Kumar</span>, a full-stack
-            developer and AI &amp; automation engineer based in Haridwar, India. At CIS IT Solutions
-            I build product frontends, backend features and API-backed agents. I also build and
-            operate independent Next.js platforms with automated publishing workflows.
+            developer and AI &amp; automation engineer based in Haridwar, India. I build
+            Next.js applications and automation workflows, including AI research and writing,
+            product suggestions, video publishing and filtered job search.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

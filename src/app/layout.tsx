@@ -30,7 +30,6 @@ export const metadata: Metadata = {
     "TypeScript",
     "PostgreSQL",
     "Prisma",
-    "multi-tenant SaaS",
     "decoded person",
     "Japp Tattva",
   ],
