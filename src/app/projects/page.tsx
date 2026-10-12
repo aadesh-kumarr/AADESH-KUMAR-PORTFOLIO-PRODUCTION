@@ -1,171 +1,111 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { Github, ExternalLink, Zap } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
-interface Project {
+type Project = {
   title: string;
   category: string;
   description: string;
-  tech: string[];
-  impact?: string;
-  image?: string; // Optional Parameter
-  github?: string;
-  live?: string;
-}
+  tags: string[];
+  href?: string;
+  linkLabel?: string;
+  metric?: string;
+  note?: string;
+};
 
 const projects: Project[] = [
   {
     title: "Decoded Person",
-    category: "AI Researcher & Writer",
-    description:
-      "An AI-based researcher and writer for tech news. It ingests 20 RSS sources, triages stories with an LLM, extracts full text, validates facts and deduplicates against PostgreSQL before publishing.",
-    tech: ["Next.js 16", "React 19", "Prisma 7", "PostgreSQL", "n8n", "Multi-model LLM", "IndexNow"],
-    impact: "Average Google position 8.1 with 522 impressions in its first week live.",
-    live: "https://decodedperson.com",
+    category: "AI researcher & writer",
+    description: "An AI-based researcher and writer for tech news. It ingests 20 RSS sources, triages stories with an LLM, extracts full text, validates facts and deduplicates against PostgreSQL before publishing.",
+    tags: ["Next.js", "PostgreSQL", "n8n", "LLMs"],
+    href: "https://decodedperson.com",
+    linkLabel: "Visit live site",
+    metric: "20",
+    note: "RSS sources",
   },
   {
     title: "Japp Tattva",
-    category: "AI Product Suggestions & Blog Writing",
-    description:
-      "A commerce platform with an AI chat assistant that suggests products from the catalogue and an AI blog writer. A 109-node n8n pipeline covers research, writing, audit, SEO and publishing with model fallback.",
-    tech: ["Next.js 16", "Prisma 7", "PostgreSQL", "Redis", "NextAuth", "Razorpay", "n8n"],
-    impact: "1.83K Web impressions and 17 clicks in 28 days in Search Console.",
-    image: "/JappTattva.png",
-    live: "https://japptattva.com",
+    category: "AI product suggestions & blog writing",
+    description: "A commerce platform with an AI chat assistant that suggests products from the catalogue. A 109-node n8n workflow handles blog research, writing, audit, SEO and publishing with model fallback.",
+    tags: ["Next.js", "Prisma", "Redis", "n8n"],
+    href: "https://japptattva.com",
+    linkLabel: "Visit live site",
+    metric: "109",
+    note: "workflow nodes",
   },
   {
     title: "YouTube Podcasts to Shorts",
-    category: "AI Video Automation",
-    description:
-      "An n8n workflow for turning YouTube podcast content into short-form clips and publishing them.",
-    tech: ["n8n", "YouTube", "Video automation", "Publishing"],
-    live: "https://www.youtube.com/channel/UCvngM-74fgwuy1B89Yw5FrA",
-  },
-  {
-    title: "Filtered Job Search",
-    category: "AI Job Search",
-    description:
-      "A personal job-search workflow that finds opportunities according to selected filters.",
-    tech: ["Job search", "Filtering", "Automation"],
+    category: "n8n video workflow",
+    description: "An n8n workflow for turning YouTube podcast content into short-form clips and publishing them.",
+    tags: ["n8n", "YouTube", "Publishing"],
+    href: "https://www.youtube.com/channel/UCvngM-74fgwuy1B89Yw5FrA",
+    linkLabel: "View shorts channel",
   },
   {
     title: "YouTube Horror Video Generation",
-    category: "AI Video Generation",
-    description:
-      "An n8n workflow for generating horror videos for YouTube.",
-    tech: ["n8n", "AI", "Video generation", "YouTube"],
-    live: "https://www.youtube.com/channel/UCdkpL-je6skbnp0uX7qOCiQ",
+    category: "n8n video workflow",
+    description: "An n8n workflow for generating horror videos for YouTube.",
+    tags: ["n8n", "Video generation", "YouTube"],
+    href: "https://www.youtube.com/channel/UCdkpL-je6skbnp0uX7qOCiQ",
+    linkLabel: "View horror channel",
+  },
+  {
+    title: "Filtered Job Search",
+    category: "n8n search workflow",
+    description: "A personal n8n workflow that finds job opportunities according to selected filters.",
+    tags: ["n8n", "Search", "Filtering"],
   },
   {
     title: "AI Script-to-Video Engine",
-    category: "Independent Local Demo",
-    description:
-      "A separate, locally demonstrable Next.js script-to-video engine with OpenAI scripting, local Hugging Face image models, still-image video assembly, AI scene direction and sound-effect suggestions.",
-    tech: ["Next.js", "OpenAI", "Hugging Face", "Video"],
+    category: "Separate local demo",
+    description: "A locally demonstrable Next.js script-to-video engine using OpenAI for scripting, local Hugging Face image models, still-image video assembly, AI scene direction and sound-effect suggestions.",
+    tags: ["Next.js", "OpenAI", "Hugging Face", "Video"],
   },
 ];
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-neutral-950 py-20 px-6 relative antialiased">
-      <BackgroundBeams />
-
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-white tracking-tighter"
-          >
-            Built <span className="text-amber-400">&</span> Deployed
-          </motion.h1>
-          <p className="text-neutral-500 mt-6 max-w-lg mx-auto text-lg italic">
-            Personal projects across full-stack development and AI automation.
-          </p>
+    <main className="page-shell">
+      <div className="site-container">
+        <div className="page-intro">
+          <p className="eyebrow">Personal work / 01—06</p>
+          <h1 className="page-title mt-4 text-white">Projects built from curiosity.</h1>
+          <p className="lead mt-6">Applications and automations I built independently. The first two are live platforms; the others show how I explore video, search and AI workflows.</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="group bg-neutral-900/40 border border-neutral-800 rounded-[2rem] overflow-hidden hover:border-amber-400/30 transition-all duration-500 shadow-2xl flex flex-col"
-            >
-              {/* Optional Image Container */}
-              {project.image ? (
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-60" />
-                  <div className="absolute bottom-4 left-6">
-                    <span className="px-3 py-1 bg-amber-400 text-black text-[10px] font-black uppercase tracking-widest rounded-full">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-              ) : (
-                /* Placeholder for Projects without images */
-                <div className="h-24 w-full bg-neutral-800/50 flex items-end px-8 pb-4">
-                  <span className="px-3 py-1 bg-neutral-700 text-amber-400 text-[10px] font-black uppercase tracking-widest rounded-full border border-amber-400/20">
-                    {project.category}
-                  </span>
-                </div>
-              )}
-
-              <div className="p-8 flex-grow flex flex-col">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <div className="flex gap-3">
-                    {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="text-neutral-500 hover:text-white transition-colors">
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
-                    {project.live && (
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title}`} className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-400 transition-colors hover:text-amber-400">
-                        {project.live.includes("youtube.com") ? "Channel" : "Live site"}
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-
-                <p className="text-neutral-400 text-sm leading-relaxed mb-6 flex-grow">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tech.map((t, i) => (
-                    <span key={i} className="px-3 py-1 text-[10px] font-bold bg-white/5 text-neutral-300 rounded-md border border-white/10 uppercase">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                {project.impact && (
-                  <div className="pt-6 border-t border-white/5 flex items-center gap-3 mt-auto">
-                    <Zap className="w-4 h-4 text-amber-400 fill-amber-400/20" />
-                    <span className="text-xs font-semibold text-amber-400/90 uppercase tracking-wider">
-                      {project.impact}
-                    </span>
-                  </div>
-                )}
+            <article key={project.title} className="panel panel-hover flex min-h-[370px] flex-col p-7 sm:p-9">
+              <div className="flex items-start justify-between gap-5">
+                <span className="font-mono text-xs text-[#788893]">{String(index + 1).padStart(2, "0")} / PROJECT</span>
+                {project.metric && <span className="text-right text-xs text-[#93a1aa]"><strong className="block text-2xl font-semibold tracking-tight text-[#a4dbd6]">{project.metric}</strong>{project.note}</span>}
               </div>
-            </motion.div>
+              <div className="mt-10">
+                <p className="eyebrow">{project.category}</p>
+                <h2 className="mt-3 text-2xl font-semibold tracking-[-.04em] text-white sm:text-3xl">{project.title}</h2>
+                <p className="mt-5 text-sm leading-7 text-[#a8b4bd]">{project.description}</p>
+              </div>
+              <div className="mt-auto pt-9">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => <span key={tag} className="chip">{tag}</span>)}
+                </div>
+                <div className="mt-6 border-t border-[#29333e] pt-5">
+                  {project.href ? (
+                    <a href={project.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-[#a4dbd6] hover:text-white">
+                      {project.linkLabel} <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <span className="text-xs font-medium uppercase tracking-[.15em] text-[#84939d]">Personal project</span>
+                  )}
+                </div>
+              </div>
+            </article>
           ))}
         </div>
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-5 border-t border-[#29333e] pt-8">
+          <p className="text-sm text-[#a8b4bd]">More detail on the AI workflows and publishing systems.</p>
+          <Link href="/automation" className="button-secondary">Explore AI work <ArrowUpRight className="h-4 w-4" /></Link>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -1,90 +1,61 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowUpRight, FileText, Mail } from "lucide-react";
-import { Cover } from "@/components/ui/cover";
-import styles from "./styles.module.css";
+import { ArrowDownRight, ArrowUpRight, Download } from "lucide-react";
 
 const stats = [
-  { value: "20", label: "RSS sources in\nmy news pipeline" },
-  { value: "2", label: "independent\nlive platforms" },
-  { value: "109", label: "nodes in my\ncontent workflow" },
+  { value: "02", label: "Live independent platforms" },
+  { value: "20", label: "RSS sources in my news pipeline" },
+  { value: "109", label: "Nodes in my content workflow" },
 ];
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-5 pt-8 pb-4">
-      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <span className="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-amber-400">
-            <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
-            Open to opportunities
-          </span>
-
-          <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Full-stack engineering
-            <br />
-            <Cover>meets AI automation</Cover>
-          </h1>
-
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-400">
-            I&apos;m <span className="font-semibold text-white">Aadesh Kumar</span>, a full-stack
-            developer and AI &amp; automation engineer based in Haridwar, India. I build
-            Next.js applications and automation workflows, including AI research and writing,
-            product suggestions, video publishing and filtered job search.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-bold text-black transition-transform hover:scale-[1.03]"
-            >
-              See the work
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/resume"
-              className="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-6 py-3 text-sm font-bold text-neutral-200 transition-colors hover:border-amber-400/50 hover:text-amber-400"
-            >
-              <FileText className="h-4 w-4" />
-              Résumé
-            </Link>
-            <a
-              href="mailto:aadeshk306@gmail.com?subject=Engineering%20Opportunity"
-              className="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-6 py-3 text-sm font-bold text-neutral-200 transition-colors hover:border-amber-400/50 hover:text-amber-400"
-            >
-              <Mail className="h-4 w-4" />
-              Contact me
-            </a>
+    <section className="hero-glow border-b border-[#29333e]">
+      <div className="site-container pb-14 pt-12 sm:pb-20 sm:pt-20">
+        <div className="mb-10 flex items-center justify-between gap-4 border-b border-[#29333e] pb-5">
+          <span className="eyebrow">Aadesh Kumar / Portfolio</span>
+          <span className="hidden text-xs text-[#8d9ba5] sm:block">Haridwar, India · Open to roles</span>
+        </div>
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.25fr)_minmax(320px,.75fr)] lg:gap-16">
+          <div className="motion-hero-copy">
+            <p className="mb-5 flex items-center gap-2 text-sm font-medium text-[#b4dcd8]">
+              <span className="h-2 w-2 rounded-full bg-[#9bd7d0]" /> Full-stack developer &amp; AI automation engineer
+            </p>
+            <h1 className="display-title max-w-4xl text-white">
+              Building useful software<span className="text-[#9bd7d0]">,</span> end to end.
+            </h1>
+            <p className="lead mt-8 max-w-2xl">
+              I work across product engineering and AI automation. My personal projects range from
+              live Next.js platforms to n8n workflows for research, writing, video publishing and job search.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="/projects" className="button-primary">Explore projects <ArrowUpRight className="h-4 w-4" /></Link>
+              <Link href="/resume" className="button-secondary">View résumé <Download className="h-4 w-4" /></Link>
+              <a href="mailto:aadeshk306@gmail.com?subject=Engineering%20Opportunity" className="button-secondary">Get in touch <ArrowUpRight className="h-4 w-4" /></a>
+            </div>
           </div>
-
-          <div className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-neutral-800 pt-7">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <div className="text-3xl font-bold text-amber-400">{s.value}</div>
-                <div className="mt-1 whitespace-pre-line text-[11px] uppercase leading-snug tracking-wider text-neutral-500">
-                  {s.label}
-                </div>
+          <div className="motion-hero-portrait relative mx-auto w-full max-w-[460px]">
+            <div className="absolute -left-5 -top-5 hidden h-24 w-24 border-l border-t border-[#5c8585] sm:block" aria-hidden="true" />
+            <div className="relative aspect-[4/4.4] overflow-hidden rounded-[1.25rem] border border-[#40545a] bg-[#1b242a]">
+              <Image src="/portrait.webp" alt="Portrait of Aadesh Kumar" fill priority sizes="(max-width: 1024px) 80vw, 420px" className="object-cover object-center" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#081014]/90 to-transparent px-6 pb-5 pt-16">
+                <span className="text-xs font-semibold uppercase tracking-[.2em] text-white">Engineer · Builder · Job seeker</span>
               </div>
-            ))}
+            </div>
+            <div className="absolute -bottom-5 -right-4 hidden h-24 w-24 border-b border-r border-[#5c8585] sm:block" aria-hidden="true" />
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.12 }}
-          className="flex justify-center lg:justify-end"
-        >
-          <div className={styles["img_shadow"]}>
-            <div className={styles["home_img"]} />
-          </div>
-        </motion.div>
+        </div>
+        <div className="motion-hero-stats mt-20 grid gap-6 border-t border-[#29333e] pt-7 sm:grid-cols-3">
+          {stats.map(({ value, label }) => (
+            <div key={label} className="flex items-center gap-4">
+              <span className="text-3xl font-semibold tracking-[-.06em] text-white">{value}</span>
+              <span className="max-w-40 text-xs leading-relaxed text-[#95a2ac]">{label}</span>
+            </div>
+          ))}
+          <a href="#selected-work" className="col-span-full mt-2 inline-flex w-fit items-center gap-2 text-xs font-semibold uppercase tracking-[.16em] text-[#9bd7d0] hover:text-white">
+            Scroll to selected work <ArrowDownRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   );

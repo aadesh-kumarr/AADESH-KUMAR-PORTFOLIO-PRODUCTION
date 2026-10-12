@@ -1,345 +1,49 @@
-"use client";
-import Image from "next/image";
-import React, { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useOutsideClick } from "../../../hooks/use-outside-click";
-import Lamp from "./header";
-
-export default function ExpandableCardDemo() {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    null
-  );
-  const ref = useRef<HTMLDivElement>(null);
-  const id = useId();
-
-  useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setActive(false);
-      }
-    }
-
-    if (active && typeof active === "object") {
-      document.body.style.overflow = "scroll";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [active]);
-
-  useOutsideClick(ref, () => setActive(null));
-
-  return (
-    <>
-      <Lamp />
-      <AnimatePresence>
-        {active && typeof active === "object" && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 h-full w-full z-10"
-          />
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
-        {active && typeof active === "object" ? (
-          <div className="fixed inset-0 grid place-items-center z-[100]">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-stone-200 rounded-full h-6 w-6"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
-            <motion.div
-              layoutId={`card-${active.title}-${id}`}
-              ref={ref}
-              className="w-full max-w-[500px] text-2xl h-full md:h-fit md:max-h-[90%]  flex flex-col bg-stone-800  sm:rounded-3xl no-scrollbar overflow-scroll"
-            >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
-                <Image
-                  priority
-                  width={250}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="w-5/6 mt-5 mx-auto h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg "
-                />
-              </motion.div>
-
-              <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-bol text-stone-200"
-                    >
-                      {active.title}
-                    </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-stone-200"
-                    >
-                      {active.description}
-                    </motion.p>
-                  </div>
-
-                  {/* <motion.a
-                    layoutId={`button-${active.title}-${id}`}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4  py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    Certificate
-                    {active.ctaText}
-                  </motion.a> */}
-                </div>
-                <div className="pt-4 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 1 }}
-                    className="text-stone-200 text-xs md:text-sm lg:text-base h-fit md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
-                  >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
-                  </motion.div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        ) : null}
-      </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full gap-4">
-        {cards.map((card) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={`card-${card.title}-${id}`}
-            onClick={() => setActive(card)}
-            className="p-4 text-xl flex flex-col md:flex-row justify-between items-center bg-stone-900 mt-4 rounded-xl cursor-pointer"
-          >
-            <div className="flex gap-4 flex-col md:flex-row p-2">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
-                <Image
-                  width={150}
-                  height={100}
-                  src={card.src}
-                  alt={card.title}
-                  className="h-40 mx-auto w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
-                />
-              </motion.div>
-              <div className="">
-                <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-stone-200 text-3xl text-center md:text-left"
-                >
-                  {card.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`description-${card.description}-${id}`}
-                  className="text-stone-200 text-center md:text-left"
-                >
-                  {card.description}
-                </motion.p>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </ul>
-    </>
-  );
-}
-
-export const CloseIcon = () => {
-  return (
-    <motion.svg
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 0.05,
-        },
-      }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 text-wite"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </motion.svg>
-  );
-};
-
-const cards = [
+const experience = [
   {
-    description: "Full-Stack & Automation Developer",
-    title: "CIS IT Solutions",
-    src: "/CISIT.jpeg",
-    link: "#",
-    content: () => {
-      return (
-        <div className="flex flex-col gap-4 w-full">
-          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
-            <p className="text-stone-200">
-              <span className="font-bold">April 2025 \u2014 Present.</span> Full-Stack Engineer;
-              later also AI &amp; Automations Engineer.
-            </p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Full-stack development with React, Next.js, TypeScript and backend APIs</li>
-              <li>AI and workflow automation with n8n, RAG and external APIs</li>
-              <li>Technical search monitoring with Google Search Console and Bing Webmaster Tools</li>
-            </ul>
-          </div>
-
-          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-            <p className="text-stone-200">Engineering practice:</p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Testing with Vitest, Jest, Supertest, K6 and Grafana</li>
-              <li>Experience with real-time features, video and payment integrations</li>
-              <li>Workflow maintenance and deployment support</li>
-            </ul>
-          </div>
-        </div>
-      );
-    },
+    role: "Full-Stack Engineer · AI & Automations Engineer",
+    company: "CIS IT Solutions",
+    period: "Apr 2025 — Present",
+    summary: "Frontend and backend engineering, API integrations, testing and AI workflow automation.",
   },
   {
-    description: "Junior Frontend Developer",
-    title: "Perky Solutions",
-    src: "/Perky.webp",
-    link: "#",
-    content: () => {
-      return (
-        <div className="flex flex-col gap-4 w-full">
-          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
-            <p className="text-stone-200">
-              <span className="font-bold">December 2024 \u2014 March 2025.</span> Frontend
-              development on responsive, data-heavy interfaces.
-            </p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Built reusable, responsive frontend components</li>
-              <li>Worked with large datasets, sorting, filtering and pagination</li>
-            </ul>
-          </div>
-
-          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-            <p className="text-stone-200">Takeaways:</p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Responsive, cross-browser compatible interfaces as a baseline requirement</li>
-              <li>Worked within production release cycles and team requirements</li>
-            </ul>
-          </div>
-        </div>
-      );
-    },
+    role: "Junior Frontend Developer",
+    company: "Perky Solutions",
+    period: "Dec 2024 — Mar 2025",
+    summary: "Responsive frontend development, reusable components and data-heavy interfaces.",
   },
-
   {
-    description: "Machine Learning & Data Science Internship",
-    title: "Edureka",
-    src: "/online_certificates/edureka_data_science_internship.webp",
-    link: "/online_certificates/edureka_data_science_internship.webp",
-    content: () => {
-      return (
-        <div className="flex flex-col md:flex-row gap-4 w-full">
-          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
-            <p className="text-stone-200">
-              Completed a{" "}
-              <span className="font-bold">2-month internship</span> focused on
-              machine learning fundamentals and practical implementation.
-            </p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Supervised and unsupervised learning techniques</li>
-              <li>Model evaluation and data preprocessing</li>
-              <li>Basic neural network concepts</li>
-            </ul>
-          </div>
-
-          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-            <p className="text-stone-200">
-              Collaborated in a{" "}
-              <span className="font-bold">20-member team</span> to implement and test
-              ML models using:
-            </p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Linear regression</li>
-              <li>Decision trees</li>
-              <li>Introductory neural networks</li>
-            </ul>
-          </div>
-        </div>
-      );
-    },
-  },
-
-  {
-    description: "Market Analysis & Full Stack Development",
-    title: "Lostronaunt",
-    src: "/online_certificates/lostronaunt.webp",
-    link: "/online_certificates/lostronaunt.webp",
-    content: () => {
-      return (
-        <div className="flex flex-col gap-4 w-full mt-5">
-          <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
-            <p className="text-stone-200">
-              <span className="font-bold">August 2024 \u2014 October 2024.</span> Market analysis
-              and Next.js development internship.
-            </p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Market research and requirements gathering</li>
-              <li>Next.js and TypeScript development</li>
-            </ul>
-          </div>
-
-          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-            <p className="text-stone-200">
-              Technologies used:
-            </p>
-            <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Next.js, TypeScript, Prisma and MongoDB</li>
-              <li>Authentication and frontend data visualization</li>
-            </ul>
-          </div>
-
-          <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
-            <p className="text-stone-200 font-bold">Key Achievement</p>
-            <p className="text-stone-200">
-              Applied market research to software requirements.
-            </p>
-          </div>
-        </div>
-      );
-    },
+    role: "Market Analysis & Next.js Development Intern",
+    company: "Lostronaunt",
+    period: "Aug 2024 — Oct 2024",
+    summary: "Market research, requirements gathering and Next.js development.",
   },
 ];
+
+export default function Experience() {
+  return (
+    <section id="experience" className="scroll-mt-24 border-t border-[#29333e] bg-[#10161c] py-20 sm:py-28">
+      <div className="site-container">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p className="eyebrow">04 / Experience</p>
+            <h2 className="section-title mt-3 text-white">Where I&apos;ve worked.</h2>
+          </div>
+          <p className="max-w-sm text-sm leading-6 text-[#95a2ac]">Professional roles and responsibilities. The work showcased on this site is from personal projects.</p>
+        </div>
+        <div className="border-t border-[#29333e]">
+          {experience.map((item, index) => (
+            <article key={item.company} className="grid gap-3 border-b border-[#29333e] py-7 md:grid-cols-[4rem_1fr_auto] md:gap-8">
+              <span className="font-mono text-xs text-[#71928f]">0{index + 1}</span>
+              <div>
+                <h3 className="text-xl font-semibold tracking-[-.025em] text-white">{item.role}</h3>
+                <p className="mt-1 text-sm font-medium text-[#a4dbd6]">{item.company}</p>
+                <p className="mt-3 max-w-xl text-sm leading-6 text-[#a8b4bd]">{item.summary}</p>
+              </div>
+              <span className="text-xs font-medium text-[#8d9ba5] md:text-right">{item.period}</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

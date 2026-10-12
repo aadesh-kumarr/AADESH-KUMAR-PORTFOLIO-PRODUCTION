@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import SideBar from "./components/main/sidebar";
+import localFont from "next/font/local";
 import Navbar from "./components/main/navbar";
 import Footer from "./components/main/footer";
+import MotionEffects from "./components/main/motion_effects";
 import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
 const SITE_URL = "https://aadeshkumar-portfolio.vercel.app";
+const geist = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -15,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Aadesh Kumar",
   },
   description:
-    "Aadesh Kumar is a full-stack developer and AI automation engineer in Haridwar, India. Explore his Next.js products, RAG agents, n8n workflows and engineering experience.",
+    "Aadesh Kumar is a full-stack developer and AI automation engineer in Haridwar, India. Explore his personal Next.js platforms, n8n workflows and engineering experience.",
   keywords: [
     "Aadesh Kumar",
     "AI automation engineer",
@@ -41,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aadesh Kumar — Full-Stack Developer & AI Automation Engineer",
     description:
-      "Explore Aadesh Kumar's full-stack engineering, AI agents, n8n workflows and independent Next.js projects.",
+      "Explore Aadesh Kumar's personal Next.js platforms, AI automation workflows and engineering experience.",
     url: SITE_URL,
     siteName: "Aadesh Kumar",
     locale: "en_US",
@@ -59,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aadesh Kumar — Full-Stack Developer & AI Automation Engineer",
     description:
-      "Explore Aadesh Kumar's full-stack engineering, AI agents, n8n workflows and independent Next.js projects.",
+      "Explore Aadesh Kumar's personal Next.js platforms, AI automation workflows and engineering experience.",
     images: "/portrait.jpeg",
   },
 };
@@ -73,23 +79,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
       </head>
 
-      <body className="antialiased no-scrollbar">
-        <div className="fixed top-0 left-0 right-0 z-40">
-          <SideBar />
-          <Navbar />
-        </div>
+      <body className={`${geist.variable} antialiased`}>
+        <MotionEffects />
+        <Navbar />
         {children}
-        <div className="">
-          <Footer />
-        </div>
+        <Footer />
         <Analytics />
       </body>
     </html>

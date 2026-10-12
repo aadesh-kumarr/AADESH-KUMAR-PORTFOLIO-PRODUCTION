@@ -1,92 +1,30 @@
-"use client";
-import Image from "next/image";
-import { RefObject } from "react";
 import Link from "next/link";
-import { Vortex } from "@/components/ui/vortex";
+import { ArrowUpRight } from "lucide-react";
 
-interface AboutProps {
-  internshipRef: RefObject<HTMLDivElement>;
-}
-
-export default function About({ internshipRef }: AboutProps) {
-  const handleScrollToInternship = () => {
-    if (internshipRef.current) {
-      internshipRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
+export default function About() {
   return (
-    <Vortex backgroundColor="" rangeY={800} particleCount={500} baseHue={120} className=" ">
-      <div className="mb-60 mt-32 overflow-hidden rounded-[2rem] border border-amber-400/20 bg-neutral-900/60 text-zinc-200 shadow-2xl backdrop-blur-xl sm:mb-80 lg:mt-80">
-        <div className="border-b border-amber-400/10 bg-amber-400/10 py-6">
-          <h2 className="text-center font-serif text-3xl uppercase tracking-widest text-amber-400">
-            About Me
-          </h2>
+    <section id="about" className="border-y border-[#29333e] bg-[#10161c] py-20 sm:py-28">
+      <div className="site-container grid gap-10 lg:grid-cols-[.75fr_1.25fr] lg:gap-20">
+        <div>
+          <p className="eyebrow">02 / About</p>
+          <h2 className="section-title mt-4 max-w-md text-white">Engineering with curiosity and ownership.</h2>
+          <Link href="/resume" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#a4dbd6] hover:text-white">
+            Read my résumé <ArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
-
-        {/* Feature Grid */}
-        <div className="grid grid-cols-2 gap-6 bg-neutral-800/20 p-8 md:grid-cols-4">
-          <Link href={"/education"} className="group flex flex-col items-center transition-all">
-            <div className="rounded-2xl border border-neutral-700 bg-neutral-900/80 p-4 transition-all duration-300 group-hover:border-amber-400/60 group-hover:shadow-[0_0_15px_rgba(251,191,36,0.2)]">
-              <Image src="/svgs/education.svg" alt="Education" width={48} height={48} className="h-12 w-12" />
-            </div>
-            <span className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 group-hover:text-amber-400">
-              B.Tech CSE
-            </span>
-          </Link>
-
-          <Link href={"/automation"} className="group flex flex-col items-center transition-all">
-            <div className="rounded-2xl border border-neutral-700 bg-neutral-900/80 p-4 transition-all duration-300 group-hover:border-amber-400/60 group-hover:shadow-[0_0_15px_rgba(251,191,36,0.2)]">
-              <Image src="/svgs/confident.svg" alt="AI Automation" width={48} height={48} className="h-12 w-12" />
-            </div>
-            <span className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 group-hover:text-amber-400">
-              AI Automation
-            </span>
-          </Link>
-
-          <Link href={"/projects"} className="group flex flex-col items-center transition-all">
-            <div className="rounded-2xl border border-neutral-700 bg-neutral-900/80 p-4 transition-all duration-300 group-hover:border-amber-400/60 group-hover:shadow-[0_0_15px_rgba(251,191,36,0.2)]">
-              <Image src="/svgs/techie.svg" alt="Architecture" width={48} height={48} className="h-12 w-12" />
-            </div>
-            <span className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 group-hover:text-amber-400">
-              Personal Projects
-            </span>
-          </Link>
-
-          <div
-            onClick={handleScrollToInternship}
-            className="group flex cursor-pointer flex-col items-center transition-all"
-          >
-            <div className="rounded-2xl border border-neutral-700 bg-neutral-900/80 p-4 transition-all duration-300 group-hover:border-amber-400/60 group-hover:shadow-[0_0_15px_rgba(251,191,36,0.2)]">
-              <Image src="/svgs/internships.svg" alt="Professional" width={48} height={48} className="h-12 w-12" />
-            </div>
-            <span className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 group-hover:text-amber-400">
-              Working Pro
-            </span>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="mx-auto max-w-4xl space-y-6 p-10 text-base leading-relaxed text-neutral-300">
+        <div className="space-y-6 text-base leading-8 text-[#a8b4bd] sm:text-lg">
           <p>
-            Hi, I&apos;m <span className="font-semibold text-white">Aadesh Kumar</span>, a full-stack
-            developer and AI &amp; automation engineer. My professional experience covers
-            frontend and backend development, API integrations, testing and workflow automation.
+            I&apos;m Aadesh Kumar, a full-stack developer and AI automation engineer based in Haridwar, India.
+            My professional experience spans interfaces, APIs, integrations, testing and workflow automation.
           </p>
           <p>
-            My personal projects show how I put those skills together. I built{" "}
-            <span className="font-medium text-amber-400">Japp Tattva</span> combines AI product
-            suggestions with a 109-node blog-writing workflow.{" "}
-            <span className="font-medium text-amber-400">Decoded Person</span> is an AI researcher
-            and writer that combines RSS ingestion, LLM triage and fact validation.
+            My personal projects are where I make that work visible. <strong className="font-medium text-white">Decoded Person</strong> is an AI researcher and writer. <strong className="font-medium text-white">Japp Tattva</strong> pairs AI product suggestions with automated blog writing.
           </p>
           <p>
-            My other personal n8n flows convert YouTube podcasts into shorts, generate horror
-            videos and search for jobs using selected filters. I also built a separate local
-            script-to-video demo. I&apos;m open to full-stack and AI automation engineering roles.
+            I also build n8n flows for podcast shorts, horror video publishing and filtered job search, alongside a separate local script-to-video demo. I&apos;m seeking full-stack and AI automation engineering roles.
           </p>
         </div>
       </div>
-    </Vortex>
+    </section>
   );
 }
