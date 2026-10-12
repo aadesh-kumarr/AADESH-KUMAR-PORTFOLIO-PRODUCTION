@@ -33,7 +33,7 @@ const products: Product[] = [
     points: [
       "20 sources feed an LLM triage step, then full-text scraping, a fact-validation agent and a quality gate before anything publishes.",
       "Every story is deduplicated against Postgres at each stage, so the same news never ships twice.",
-      "One workflow distributes to YouTube, Instagram, Facebook, LinkedIn and Discord, including resumable chunked media uploads.",
+      "Automated publishing reaches YouTube, Instagram, LinkedIn and Discord, including resumable media uploads.",
     ],
   },
   {
@@ -45,14 +45,14 @@ const products: Product[] = [
     stack: ["Next.js 16", "Prisma 7", "PostgreSQL", "Redis", "NextAuth", "Razorpay", "n8n"],
     metrics: [
       { value: "109", label: "node pipeline" },
-      { value: "3.58K", label: "impressions / 3 mo" },
+      { value: "1.83K", label: "Web impressions / 28 days" },
       { value: "4", label: "apps in monorepo" },
     ],
     points: [
       "Storefront, admin backend and a headless blog platform in one monorepo, with Redis caching, cron jobs and payments.",
       "A 109-node content pipeline runs research → write → audit → SEO → publish, falling back across GPT, Gemini and Llama when a model fails.",
       "A keyword engine merges Search Console data with AI candidates, scores each 0–100, and rewrites post metadata automatically.",
-      "A HARO outreach agent filters irrelevant journalist queries, while an AI concierge routes intent and looks up the live product catalogue.",
+      "A session-aware AI concierge can look up products in the live catalogue.",
     ],
   },
 ];
@@ -68,8 +68,7 @@ export default function FeaturedWork() {
           Two products running in production
         </h2>
         <p className="mt-3 max-w-2xl text-neutral-400">
-          Both are mine end to end — schema, API, interface, automation and deployment.
-          They run on their own; I mostly watch the dashboards.
+          Independent projects where I designed the applications and their automation workflows.
         </p>
       </div>
 

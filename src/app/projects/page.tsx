@@ -21,7 +21,7 @@ const projects: Project[] = [
     title: "Decoded Person",
     category: "Autonomous Content Platform",
     description:
-      "An automated tech-news desk. 20 RSS sources feed an LLM triage step, then full-text scraping, a fact-validation agent and a quality gate before anything publishes \u2014 with deduplication against Postgres at every stage. A single workflow then distributes each story to YouTube, Instagram, Facebook, LinkedIn and Discord, with SDXL-generated creatives and resumable chunked media uploads.",
+      "An automated tech-news desk. 20 RSS sources feed LLM triage, full-text extraction, fact validation and PostgreSQL deduplication. Publishing reaches YouTube, Instagram, LinkedIn and Discord, including resumable media uploads.",
     tech: ["Next.js 16", "React 19", "Prisma 7", "PostgreSQL", "n8n", "Multi-model LLM", "IndexNow"],
     impact: "Average Google position 8.1 with 522 impressions in its first week live.",
     live: "https://decodedperson.com",
@@ -30,9 +30,9 @@ const projects: Project[] = [
     title: "Japp Tattva",
     category: "E-Commerce & Content Engine",
     description:
-      "A storefront, admin backend and headless blog platform in one monorepo, with Redis caching, scheduled cron jobs and payment integration. Behind it runs a 109-node content pipeline \u2014 research, write, audit, SEO, publish \u2014 with automatic model fallback, a Search Console-powered keyword engine, a HARO outreach agent and a session-aware AI concierge.",
+      "A Next.js storefront, admin backend and headless blog in one monorepo, with Redis caching, scheduled jobs and Razorpay payments. A 109-node n8n pipeline covers research, writing, audit, SEO and publishing with model fallback. A Search Console and AI keyword engine scores topics and updates metadata.",
     tech: ["Next.js 16", "Prisma 7", "PostgreSQL", "Redis", "NextAuth", "Razorpay", "n8n"],
-    impact: "3.58K search impressions over three months, trending up roughly 3\u00d7.",
+    impact: "1.83K Web impressions and 17 clicks in 28 days in Search Console.",
     image: "/JappTattva.png",
     live: "https://japptattva.com",
   },
@@ -40,17 +40,33 @@ const projects: Project[] = [
     title: "AI Agents & Workflow Automation",
     category: "Automation (CIS IT Solutions)",
     description:
-      "Production AI agents across several products \u2014 after-sales support, astrology consultation and CRM automation \u2014 plus an n8n and SERP API pipeline that researches, writes, SEO-optimises and publishes content on its own. I also took over agents that had stalled for around three months and brought them to production quality.",
+      "Extended Fesensi's RAG ticketing agent to create tickets, retrieve files and draft emails. Built Nakshatra chat and reporting agents and Artisan's sales agent, then developed n8n blog agents and a SERP API research-to-publishing pipeline.",
     tech: ["n8n", "AI Agents", "SERP API", "Node.js", "REST APIs"],
-    impact: "Removed the need for a dedicated content and SEO hire.",
+    impact: "Agent work across ticketing, astrology and commerce products.",
   },
   {
     title: "Multi-Tenant SaaS Platform",
     category: "Backend Architecture (CIS IT Solutions)",
     description:
-      "Rebuilt a client SaaS backend for multi-tenancy under senior mentorship, removing the architectural limit that blocked onboarding new client organisations. Covered by unit and integration tests, and load-tested with K6 and Grafana so bottlenecks surfaced before release rather than after.",
+      "Rebuilt the Fesensi backend for multi-tenancy under senior mentorship and used K6 with Grafana to identify and address performance bottlenecks.",
     tech: ["Next.js", "Node.js", "Redis", "K6", "Grafana", "Vitest", "Metronic"],
-    impact: "Performance verified under load before release, not after.",
+    impact: "Multi-tenant backend with load testing and performance analysis.",
+  },
+  {
+    title: "CXScore360",
+    category: "Full-Stack Product (CIS IT Solutions)",
+    description:
+      "Built a customer-review platform across frontend and backend, from design through implementation.",
+    tech: ["Frontend", "Backend", "Customer reviews"],
+    impact: "Owned implementation across both application layers.",
+  },
+  {
+    title: "AI Script-to-Video Engine",
+    category: "Independent Local Demo",
+    description:
+      "Built a locally demonstrable Next.js script-to-video engine with OpenAI scripting, local Hugging Face image models, still-image video assembly, AI scene direction and sound-effect suggestions.",
+    tech: ["Next.js", "OpenAI", "Hugging Face", "Video"],
+    impact: "Local demo available on request.",
   },
   {
     title: "Bill & Order Tracker",
@@ -79,7 +95,7 @@ export default function Projects() {
             Built <span className="text-amber-400">&</span> Deployed
           </motion.h1>
           <p className="text-neutral-500 mt-6 max-w-lg mx-auto text-lg italic">
-            A showcase of production-grade systems, automated workflows, and high-performance architectures.
+            Selected professional work and independent projects across full-stack development and AI automation.
           </p>
         </div>
 

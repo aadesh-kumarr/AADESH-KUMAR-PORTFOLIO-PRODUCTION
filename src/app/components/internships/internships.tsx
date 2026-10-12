@@ -212,15 +212,14 @@ const cards = [
         <div className="flex flex-col gap-4 w-full">
           <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
             <p className="text-stone-200">
-              <span className="font-bold">April 2025 \u2014 Present.</span> Sole developer
-              across five production products spanning multi-tenant SaaS, e-commerce,
-              customer-experience analytics, online consultation and CRM.
+              <span className="font-bold">April 2025 \u2014 Present.</span> Full-Stack Engineer;
+              later also AI &amp; Automations Engineer.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Owned the frontend end to end and contributed backend architecture on each product</li>
-              <li>Rebuilt a client SaaS backend for multi-tenancy under senior mentorship</li>
-              <li>Built and deployed AI agents for after-sales support, astrology consultation and CRM automation</li>
-              <li>Designed an n8n and SERP API pipeline that researches, writes and publishes content autonomously</li>
+              <li>Built frontends for Fesensi, Artisan and Nakshatra; built CXScore360 across frontend and backend</li>
+              <li>Rebuilt the Fesensi backend for multi-tenancy under senior mentorship</li>
+              <li>Built API-backed agents for ticketing, astrology chat and reports, and marketplace sales</li>
+              <li>Developed n8n blog agents and a SERP API research-to-publishing pipeline</li>
               <li>Monitored technical search health with Google Search Console and Bing Webmaster Tools</li>
             </ul>
           </div>
@@ -231,7 +230,7 @@ const cards = [
               <li>Load testing with K6 and Grafana to surface bottlenecks before release</li>
               <li>Unit and integration test suites with Vitest, Jest and Supertest</li>
               <li>Socket.io real-time features, Agora video consultation, Razorpay payments</li>
-              <li>Excalidraw architecture reviews before implementation; mentored three junior developers</li>
+              <li>Managed n8n workflows and a Vercel test branch</li>
             </ul>
           </div>
         </div>
@@ -318,9 +317,8 @@ const cards = [
         <div className="flex flex-col gap-4 w-full mt-5">
           <div className="border-amber-400 text-lg border p-5 rounded bg-stone-900">
             <p className="text-stone-200">
-              Completed a{" "}
-              <span className="font-bold">1-month internship</span> focusing on
-              market research and full-stack web development.
+              <span className="font-bold">August 2024 \u2014 October 2024.</span> Market analysis
+              and Next.js development internship.
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
               <li>Market trend analysis and requirement gathering</li>
@@ -333,16 +331,15 @@ const cards = [
               Worked as a <span className="font-bold">Full Stack Developer</span>:
             </p>
             <ul className="list-disc ml-5 font-semibold text-stone-200">
-              <li>Built frontend and backend using Next.js and Node.js</li>
-              <li>Independently developed a complete functional web application</li>
+              <li>Built an analytics dashboard with Next.js, TypeScript, Prisma, MongoDB and NextAuth</li>
+              <li>Added access control, search, charts and uploads</li>
             </ul>
           </div>
 
           <div className="border-amber-400 border p-5 text-lg rounded bg-stone-900">
             <p className="text-stone-200 font-bold">Key Achievement</p>
             <p className="text-stone-200">
-              Developed a web application that reduced manual paperwork by{" "}
-              <span className="font-bold">70%</span>.
+              Turned market research findings into dashboard requirements and an implemented application.
             </p>
           </div>
         </div>

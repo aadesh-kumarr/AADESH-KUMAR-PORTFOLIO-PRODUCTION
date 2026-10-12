@@ -50,7 +50,6 @@ const alsoUsing = [
   "Socket.io",
   "OAuth 2.0",
   "JWT",
-  "Mongoose",
   "Vitest",
   "Jest",
   "Supertest",
@@ -62,13 +61,15 @@ const alsoUsing = [
   "Google Search Console",
   "IndexNow",
   "SERP API",
-  "LangChain",
+  "RAG",
+  "Vector databases",
   "OpenAI",
   "Gemini",
   "Llama",
-  "Instagram Graph API",
-  "YouTube Data API",
-  "LinkedIn UGC API",
+  "TanStack Query",
+  "TanStack Table",
+  "Bing Webmaster Tools",
+  "Schema.org",
 ];
 
 export default function Tech_Stack() {

@@ -1,6 +1,5 @@
 import React from "react";
-import { FaInstagram, FaYoutube, FaGithub,FaEnvelope } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io5";
+import { FaGithub,FaEnvelope } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 export   function Contact(){
@@ -9,27 +8,18 @@ export   function Contact(){
         
 <>
 <div className="justify-end border border-teal-800 p-10 mt-8">
-WALKING TOWARDS BRILLIANCE
+Open to full-stack and AI automation engineering roles
 </div>
 <div className="flex flex-row gap-2">
 {/* Social Media Links */}
 <div className="flex flex-row mt-4 align-middle items-center gap-2 mx-auto">
-  <a href="https://instagram.com/those_misty_stories">
-    <FaInstagram className="contact-btns" />
-  </a>
-  <a href="https://www.youtube.com/@DecodedPerson-hn5np">
-    <FaYoutube className="contact-btns" />
-  </a>
-  <a href="https://github.com/aadesh-kumarr">
+  <a href="https://github.com/aadesh-kumarr" aria-label="GitHub">
     <FaGithub className="contact-btns" />
   </a>
-  <a href="https://wa.me/+91 9760655299">
-    <IoLogoWhatsapp className="contact-btns" />
-  </a>
-  <a href="https://www.linkedin.com/in/aadesh-kumar/">
+  <a href="https://www.linkedin.com/in/aadesh-kumar/" aria-label="LinkedIn">
     <FaLinkedin className="contact-btns" />
   </a>
-  <a href="mailto:aadeshk306@gmail.com">
+  <a href="mailto:aadeshk306@gmail.com" aria-label="Email Aadesh">
             <FaEnvelope className="contact-btns" />
           </a>
 

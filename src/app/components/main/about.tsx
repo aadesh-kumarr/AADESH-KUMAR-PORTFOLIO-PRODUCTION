@@ -70,25 +70,21 @@ export default function About({ internshipRef }: AboutProps) {
         <div className="mx-auto max-w-4xl space-y-6 p-10 text-base leading-relaxed text-neutral-300">
           <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-5xl first-letter:text-amber-400">
             Hi, I&apos;m <span className="text-lg font-semibold text-white">Aadesh Kumar</span>, an
-            AI automation engineer, SEO specialist and full-stack developer with more than two
-            years of industry experience. At{" "}
+            full-stack developer and AI &amp; automation engineer. At{" "}
             <span className="font-medium text-amber-400">CIS IT Solutions</span>, I&apos;ve been the
-            sole developer on five production products spanning multi-tenant SaaS, e-commerce,
-            customer-experience analytics, online consultation and CRM — owning the frontend end
-            to end and contributing to backend architecture on each.
+            built frontends for Fesensi, Artisan and Nakshatra and contributed backend services
+            and API integrations. I also built CXScore360 across its frontend and backend.
           </p>
 
           <p>
-            The work I care most about is <span className="font-medium text-amber-400">AI automation</span>.
-            I build <span className="ml-1 font-medium text-amber-400">n8n</span> workflows and agent
-            systems that handle real business logic: content research and publishing, after-sales
-            support, CRM updates and online consultations. I also own the SEO layer — keyword
-            research, technical search health, structured data and automated indexing — that helps
-            those systems rank.
+            My AI work includes a ticketing agent with RAG and document retrieval, Nakshatra&apos;s
+            chat and reporting agents, and an Artisan sales agent connected to product and order APIs.
+            I also build <span className="font-medium text-amber-400">n8n</span> content workflows
+            and monitor technical search health with Google Search Console and Bing Webmaster Tools.
           </p>
 
           <p>
-            On the platform side I helped rebuild a client SaaS backend for{" "}
+            On the platform side I rebuilt the Fesensi backend for{" "}
             <span className="font-medium text-amber-400">multi-tenancy</span> under senior
             mentorship. I work with{" "}
             <span className="font-medium text-amber-400">Redis caching</span>,{" "}
@@ -99,17 +95,13 @@ export default function About({ internshipRef }: AboutProps) {
           </p>
 
           <p>
-            I plan before I type. <span className="font-medium text-amber-400">Excalidraw</span>{" "}
-            first, then the schema, then the code. It has saved me more rewrites than any framework
-            has.
+            Earlier, at Perky Solutions, I built dashboards and tables for more than 10,000 rows.
+            At Lostronaunt, I translated market research into a Next.js analytics dashboard.
           </p>
 
           <p className="border-t border-neutral-800 pt-6 text-sm italic text-neutral-400">
-            My own platforms are the proof: Japp Tattva at{" "}
-            <span className="font-medium text-amber-400">3.58K search impressions</span> over three
-            months, and Decoded Person hitting an{" "}
-            <span className="font-medium text-amber-400">average Google position of 8.1</span> in its
-            first week live.
+            I&apos;m open to full-stack and AI automation engineering opportunities. You can review
+            the projects here and choose the résumé that fits your role.
           </p>
         </div>
       </div>

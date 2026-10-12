@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import SideBar from "./components/main/sidebar";
-import Resume from "./components/main/resume";
 import Navbar from "./components/main/navbar";
 import Footer from "./components/main/footer";
 import { Analytics } from "@vercel/analytics/next";
@@ -12,16 +11,16 @@ const SITE_URL = "https://aadeshkumar-portfolio.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
+    default: "Aadesh Kumar — Full-Stack Developer & AI Automation Engineer",
     template: "%s | Aadesh Kumar",
   },
   description:
-    "Aadesh Kumar is an AI automation engineer, SEO specialist and full-stack developer with 2+ years of industry experience. He builds AI agents, search-driven systems and production web platforms.",
+    "Aadesh Kumar is a full-stack developer and AI automation engineer in Haridwar, India. Explore his Next.js products, RAG agents, n8n workflows and engineering experience.",
   keywords: [
     "Aadesh Kumar",
     "AI automation engineer",
-    "SEO specialist",
-    "2+ years industry experience",
+    "software engineer",
+    "technical SEO",
     "n8n developer",
     "AI agent workflows",
     "LLM orchestration",
@@ -41,9 +40,9 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
+    title: "Aadesh Kumar — Full-Stack Developer & AI Automation Engineer",
     description:
-      "AI automation, technical SEO and production web platforms from an engineer with 2+ years of industry experience.",
+      "Explore Aadesh Kumar's full-stack engineering, AI agents, n8n workflows and independent Next.js projects.",
     url: SITE_URL,
     siteName: "Aadesh Kumar",
     locale: "en_US",
@@ -53,15 +52,15 @@ export const metadata: Metadata = {
         url: "/portrait.jpeg",
         width: 1200,
         height: 630,
-        alt: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
+        alt: "Aadesh Kumar — Full-Stack Developer & AI Automation Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aadesh Kumar — AI Automation Engineer, SEO Specialist & Full-Stack Developer",
+    title: "Aadesh Kumar — Full-Stack Developer & AI Automation Engineer",
     description:
-      "AI automation, technical SEO and production web platforms from an engineer with 2+ years of industry experience.",
+      "Explore Aadesh Kumar's full-stack engineering, AI agents, n8n workflows and independent Next.js projects.",
     images: "/portrait.jpeg",
   },
 };
@@ -86,7 +85,6 @@ export default function RootLayout({
       <body className="antialiased no-scrollbar">
         <div className="fixed top-0 left-0 right-0 z-40">
           <SideBar />
-          <Resume />
           <Navbar />
         </div>
         {children}

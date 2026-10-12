@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, FileText } from "lucide-react";
+import { ArrowUpRight, FileText, Mail } from "lucide-react";
 import { Cover } from "@/components/ui/cover";
 import styles from "./styles.module.css";
 
 const stats = [
-  { value: "5", label: "products shipped\nas sole developer" },
-  { value: "2", label: "live automated\nplatforms" },
-  { value: "2+", label: "years of\nindustry experience" },
+  { value: "4", label: "CIS products\ncontributed to" },
+  { value: "2", label: "independent\nlive platforms" },
+  { value: "109", label: "nodes in my\ncontent workflow" },
 ];
 
 export default function Hero() {
@@ -27,17 +27,16 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            I build systems that
+            Full-stack engineering
             <br />
-            <Cover>run themselves</Cover>
+            <Cover>meets AI automation</Cover>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-400">
-            I&apos;m <span className="font-semibold text-white">Aadesh Kumar</span> — an
-            <span className="font-medium text-amber-400"> AI automation engineer</span>, SEO
-            specialist and full-stack developer with more than two years of industry experience.
-            I design AI agent workflows and search-driven content systems, and I&apos;ve been the
-            sole developer across five production products at CIS IT Solutions.
+            I&apos;m <span className="font-semibold text-white">Aadesh Kumar</span>, a full-stack
+            developer and AI &amp; automation engineer based in Haridwar, India. At CIS IT Solutions
+            I build product frontends, backend features and API-backed agents. I also build and
+            operate independent Next.js platforms with automated publishing workflows.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -55,6 +54,13 @@ export default function Hero() {
               <FileText className="h-4 w-4" />
               Résumé
             </Link>
+            <a
+              href="mailto:aadeshk306@gmail.com?subject=Engineering%20Opportunity"
+              className="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-6 py-3 text-sm font-bold text-neutral-200 transition-colors hover:border-amber-400/50 hover:text-amber-400"
+            >
+              <Mail className="h-4 w-4" />
+              Contact me
+            </a>
           </div>
 
           <div className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-neutral-800 pt-7">
